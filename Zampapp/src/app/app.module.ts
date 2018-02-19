@@ -14,7 +14,7 @@ import { ResultadosComponent } from './resultados/resultados.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
     HomeComponent,
     ResultadosComponent
   ],

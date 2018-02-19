@@ -10,6 +10,6 @@ export class Plato {
     temp: string; 
     alergia: Array<string>;
     preferencia: string;
-    foto: string
+    foto: string;
   }
   

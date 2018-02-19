@@ -11,6 +11,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { ResultadosComponent } from './resultados/resultados.component';
 import { PreguntasComponent } from './preguntas/preguntas.component';
 
+import {PlatoDetailComponent} from './plato-detail/plato-detail.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PreguntasComponent } from './preguntas/preguntas.component';
     FooterComponent,
     HomeComponent,
     ResultadosComponent,
-    PreguntasComponent
+    PreguntasComponent,
+    PlatoDetailComponent
   ],
   imports: [
     BrowserModule,

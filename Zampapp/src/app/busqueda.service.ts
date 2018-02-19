@@ -9,9 +9,9 @@ export class BusquedaService {
 
   }
 
-  public CogerFiltrador(): Busqueda {
-    
-    return this.Busqueda;
+  public static CogerFiltrador(): void {
+    let Busuqeda= new Busqueda();
+    // return Busqueda;
   }
 
 }

@@ -14,9 +14,9 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
     this.Escribir('');
-    console.log(BusquedaService.CogerFiltrador)
-    
+    console.log(BusquedaService.CogerFiltrador());
   }
 
   Escribir(texto) {

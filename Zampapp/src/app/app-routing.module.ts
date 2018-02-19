@@ -15,8 +15,6 @@ const routes: Routes = [
   { path: 'Home', component: HomeComponent },
   { path: 'Resultados', component: ResultadosComponent },
   { path: 'Preguntas', component: HomeComponent },
-
-  
 ];
  
 @NgModule({

@@ -1,0 +1,154 @@
+/*Empieza Footer adhesivo */
+  /* .enlaces {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  } */
+/*Final Footer adhesivo */
+
+
+
+/*Empieza Diseño general*/
+* {
+    font-family: Helvetica, arial;
+    color: #D35400;
+    padding: 0px;
+    margin: 0px;
+    font-size: 15pt;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+body {
+    font-family: helvetica, Arial;
+    color: #C0CA33;
+    background-color: #f5f5f5;
+}
+/*Fin Diseño general*/
+
+
+
+/* Empieza FOOTER*/
+.rellenofooter {
+    margin: 0px;
+    padding: 0px;
+    background-color: transparent;
+    height: 50px;
+    /* height: 0px; */
+
+}
+
+footer {
+    /* position: fixed; */
+    bottom: 0px;
+    background: #ea5b0c;
+    width: 100%;
+    height: 50px;
+}
+
+footer>div {
+    display: inline-block;
+    line-height: initial;
+}
+
+footer>.enlaces {
+    margin-left: 20pt;
+    width: 400pt;
+    background: #ea5b0c;
+}
+
+footer>.enlaces>div {
+    display: inline-block;
+    margin-left: 30pt;
+    margin-top: 15pt;
+    top: 0px;
+}
+
+.rrssicon {
+    position: absolute;
+    margin-top: 8pt;
+    right: 20pt;
+}
+
+.rrssicon a {
+    text-decoration-line: none;
+    font-size: 0pt;
+}
+
+.rrssicon img {
+    width: 25pt;
+    margin-right: 5pt;
+}
+
+@media (max-width:700px) {
+    .rellenofooter {
+        height: 90px;
+        /* height: 0px; */
+    }
+    footer {
+        height: 110px;
+    }
+    footer>.enlaces {
+        margin-left: 0pt;
+        width: 180pt;
+    }
+    footer>.enlaces>div {
+        display: block;
+        margin-left: 20pt;
+        margin-top: 5pt;
+        top: 0px;
+    }
+    footer>.enlaces>div:first-of-type {
+        margin-top: 15pt;
+    }
+    .rrssicon {
+        right: 10pt;
+    }
+}
+
+@media (max-width:400px) {
+    .rellenofooter {
+        height: 90px;
+        /* height: 0px; */
+    }
+    footer {
+        height: 90px;
+    }
+    footer>.enlaces {
+        margin-left: 0pt;
+        width: 130pt;
+        margin-top: 0pt;
+    }
+    footer>.enlaces>div {
+        display: block;
+        margin-left: 10pt;
+        margin-top: 1pt;
+        top: 0px;
+    }
+    footer>.enlaces>div:first-of-type {
+        margin-top: 10px;
+    }
+    footer>.enlaces>div>a {
+        font-size: 13pt;
+    }
+    .rrssicon {
+        right: 0pt;
+    }
+    .rrssicon img {
+        width: 18pt;
+        margin-right: 5pt;
+    }
+}
+/*Fin FOOTER*/

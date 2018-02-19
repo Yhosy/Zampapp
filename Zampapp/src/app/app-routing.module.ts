@@ -16,9 +16,12 @@ const routes: Routes = [
   { path: 'Home', component: HomeComponent },
   { path: 'Resultados', component: ResultadosComponent },
   { path: 'Preguntas', component: HomeComponent },
+<<<<<<< HEAD
   { path: 'pagplato', component: PlatoDetailComponent }
 
   
+=======
+>>>>>>> 75e1ea978e7dc3d702426e7f58117b7aa306384c
 ];
  
 @NgModule({

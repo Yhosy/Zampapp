@@ -8,7 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ResultadosComponent } from './resultados/resultados.component';
-
+import {PlatoDetailComponent} from './plato-detail/plato-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,8 @@ import { ResultadosComponent } from './resultados/resultados.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ResultadosComponent
+    ResultadosComponent,
+    PlatoDetailComponent
   ],
   imports: [
     BrowserModule,

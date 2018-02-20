@@ -1,3 +1,47 @@
-<p>
-  resultados works!
-</p>
+<div class="filtro">  
+  <div class="cat">
+    <h6>Categorías</h6>
+    <form action="#">
+      <p *ngFor="let categoria of categorias">
+        <input ngModel type="checkbox" name="categoria" [id]="categoria" [value]="categoria" (click)="onCheckboxChange(categoria,$event)" />
+        <label [for]="categoria">{{categoria}}</label>
+      </p>
+    </form>
+  </div>
+
+
+  <div class="cat">
+    <h6>Cantidad</h6>
+    <form action="#">
+      <p *ngFor="let cantidad of cantidad">
+        <input ngModel type="checkbox" name="cantidad" [id]="cantidad" [value]="cantidad" (click)="onCheckboxChange(cantidad,$event)"/>
+        <label [for]="cantidad">{{cantidad}}</label>
+      </p>
+    </form>
+  </div>
+
+  <div class="cat">
+    <h6>Preferencia</h6>
+    <form action="#">
+      <p *ngFor="let preferencia of preferencias">
+        <input ngModel type="checkbox" name="preferencia" [id]="preferencia" [value]="preferencia" (click)="onCheckboxChange(preferencia,$event)"/>
+        <label [for]="preferencia">{{preferencia}}</label>
+      </p>
+    </form>
+  </div>
+
+  <div class="button"><button (click)=onFilter()>Submit</button></div>
+</div>
+
+<div class="table">
+  <div class="row">
+    <app-platos 
+
+    *ngFor = "let plato of listaFiltrada"
+    [plato] = "plato"
+    ></app-platos>
+
+    <!--<app-product-details></app-product-details>
+    <router-outlet></router-outlet>-->   
+  </div>
+</div>

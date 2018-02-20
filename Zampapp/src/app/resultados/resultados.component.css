@@ -1,0 +1,19 @@
+.cat{
+	height: auto;
+}
+
+.button{
+	height: 50px;
+}
+
+.filtro{
+	left:0px;
+	width: 200px;
+	border: 4px #566573 solid;
+	padding: 10px;
+	display: inline-block;
+}
+
+.table{
+	display: inline-block;
+}	

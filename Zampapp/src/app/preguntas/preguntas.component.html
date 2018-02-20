@@ -8,7 +8,7 @@
         <h5>Tenemos comidas para compartir</h5>
       </div>
       <div>
-        <form #ask1="ngForm">
+        <form #ask1="ngForm" name="cantidad">
           <input type="checkbox" name="compartir" id="compartir" ngModel>
           <label for="compartir">
             Para compartir
@@ -96,8 +96,8 @@
     </div>
   </div>
   <div id="askbutton">
-    <a id="aresultados" routerLink="">
-      <img src="../assets/img/icono/buscar.png" alt="busqueda" id="btnAdelante" (click)="prueba(ask1, ask2, ask3, ask4)">
+    <a id="aresultados">
+      <img src="../assets/img/icono/buscar.png" alt="busqueda" id="btnAdelante" (click)="onSelect(ask1, ask2, ask3, ask4)">
     </a>
   </div>
 </div>

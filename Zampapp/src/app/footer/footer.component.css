@@ -50,6 +50,7 @@ footer>.enlaces>div {
 
 footer>.enlaces>div>a {
     color: white;
+    text-decoration-line: none;
 }
 
 .rrssicon {

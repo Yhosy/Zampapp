@@ -26,12 +26,12 @@
                 <div class="subderecha">
                     <div class="pretable" *ngFor="let categoria of filtrado">
                         <div>
-                            <input name='categoria' [value]=categoria.value type="checkbox" class="transparent" [id]=categoria.id>
+                            <input #input name='categoria' [value]=categoria.value type="checkbox" class="transparent" [id]=categoria.id>
                             <p>{{categoria.value}}</p>
                         </div>
                     </div>
                     <div class="busqueda">
-                        <a  (click)="Hola()">
+                        <a (click)="Hola()">
                             <!-- routerLink="/Resultados" -->
                             <img src="../../assets/img/icono/buscar.png" alt="" class="imgBusqueda" id="btnBusqueda">
                         </a>
@@ -42,17 +42,3 @@
         </div>
     </section>
 </div>
-
-<!-- <div>
-    <label class="checkbox-inline">
-      <input type="checkbox" name="favoriteColors" [(ngModel)]="obj.formData.op1"> Op1
-    </label>
-    <label class="checkbox-inline">
-      <input type="checkbox" name="favoriteColors" [(ngModel)]="obj.formData.op2"> Op2
-    </label>
-    <label class="checkbox-inline">
-      <input type="checkbox" name="favoriteColors" [(ngModel)]="obj.formData.op3"> Op3
-    </label>
-  
-    <pre>{{formData|json}}</pre>
-  </div> -->

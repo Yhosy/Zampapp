@@ -90,13 +90,12 @@ body {
     margin: 0 auto 0 auto;
     overflow-y: auto;
     padding: 5px;
-    height: 390px;
+    display: inline-block;
 }
 
 .home .pretable div {
     text-align: center;
     vertical-align: middle;
-    display: inline-block;
     height: auto;
     overflow: hidden;
 }

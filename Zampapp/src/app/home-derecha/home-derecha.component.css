@@ -43,22 +43,17 @@ section h1 {
     text-align: center;
     vertical-align: middle;
 }
-
-.izquierda {
-    background-color: white;
-    border-radius: 5px;
-    margin: 20px;
-    margin-bottom: 10px;
-    border: 4px #566573 solid;
-    position: inherit;
-}
-
 .derecha {
     background-color: white;
     border-radius: 5px;
     margin: 20px;
     margin-bottom: 10px;
     border: 4px #566573 solid;
+    position: absolute;
+    right: 0px;
+    top: 20%;
+    width: 150px;
+    height: 300px;
 }
 
 .derecha div {
@@ -67,6 +62,7 @@ section h1 {
 
 .subderecha {
     display: block;
+    overflow-y: auto;
 }
 
 .busqueda {
@@ -79,8 +75,8 @@ section h1 {
 
 .busqueda a img {
     margin: 0px;
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
 }
 
 .pretable {
@@ -88,6 +84,7 @@ section h1 {
     overflow-y: auto;
     padding: 5px;
     display: inline-block;
+   
 }
 
 .pretable div {
@@ -104,51 +101,51 @@ section h1 {
     -moz-appearance: none;
 }
 
-#catpizza {
+#catpizzas {
     content: url("/assets/img/comida/pizza.png");
 }
 
-.pretable div #cathamburguesa {
+.pretable div #cathamburguesas {
     content: url("../../assets/img/comida/burguer.png");
 }
 
-.pretable div #catbocadillo {
+.pretable div #catbocadillos {
     content: url("../../assets/img/comida/bocadillo.png");
 }
 
-.pretable div #catensalada {
+.pretable div #catensaladas {
     content: url("../../assets/img/comida/ensalada.png");
 }
 
-.pretable div #catsopa {
+.pretable div #catsopas {
     content: url("../../assets/img/comida/sopa.png");
 }
 
-.pretable div #catcarne {
+.pretable div #catcarnes {
     content: url("../../assets/img/comida/carne.png");
 }
 
-.pretable div #catpescado {
+.pretable div #catpescados {
     content: url("../../assets/img/comida/pescado.png");
 }
 
-.pretable div #catpescado {
+.pretable div #catpescados {
     content: url("../../assets/img/comida/pescado.png");
 }
 
-.pretable div #catpasta {
+.pretable div #catpastas {
     content: url("../../assets/img/comida/pasta.png");
 }
 
-.pretable div #catkebab {
+.pretable div #catkebabs {
     content: url("../../assets/img/comida/kebab.png");
 }
 
-.pretable div #catsushi {
+.pretable div #catsushis {
     content: url("../../assets/img/comida/japonesa.png");
 }
 
-.pretable div #catarroz {
+.pretable div #catarrozes {
     content: url("../../assets/img/comida/arroz.png");
 }
 
@@ -156,51 +153,51 @@ section h1 {
     content: url("../../assets/img/comida/varios.png");
 }
 
-#catpizza:checked {
+#catpizzas:checked {
     content: url("/assets/img/comida/pizza2.png");
 }
 
-.pretable div #cathamburguesa:checked {
+.pretable div #cathamburguesas:checked {
     content: url("../../assets/img/comida/burguer2.png");
 }
 
-.pretable div #catbocadillo:checked {
+.pretable div #catbocadillos:checked {
     content: url("../../assets/img/comida/bocadillo2.png");
 }
 
-.pretable div #catensalada:checked {
+.pretable div #catensaladas:checked {
     content: url("../../assets/img/comida/ensalada2.png");
 }
 
-.pretable div #catsopa:checked {
+.pretable div #catsopas:checked {
     content: url("../../assets/img/comida/sopa2.png");
 }
 
-.pretable div #catcarne:checked {
+.pretable div #catcarnes:checked {
     content: url("../../assets/img/comida/carne2.png");
 }
 
-.pretable div #catpescado:checked {
+.pretable div #catpescados:checked {
     content: url("../../assets/img/comida/pescado2.png");
 }
 
-.pretable div #catpescado:checked {
+.pretable div #catpescados:checked {
     content: url("../../assets/img/comida/pescado2.png");
 }
 
-.pretable div #catpasta:checked {
+.pretable div #catpastas:checked {
     content: url("../../assets/img/comida/pasta2.png");
 }
 
-.pretable div #catkebab:checked {
+.pretable div #catkebabs:checked {
     content: url("../../assets/img/comida/kebab2.png");
 }
 
-.pretable div #catsushi:checked {
+.pretable div #catsushis:checked {
     content: url("../../assets/img/comida/japonesa2.png");
 }
 
-.pretable div #catarroz:checked {
+.pretable div #catarrozes:checked {
     content: url("../../assets/img/comida/arroz2.png");
 }
 
@@ -216,9 +213,7 @@ section h1 {
     section {
         display: block;
     }
-    .izquierda .random a img {
-        margin: 0 0 10px 37%;
-    }
+
     .busqueda a img {
         margin: 5px;
     }
@@ -230,13 +225,6 @@ section h1 {
     }
     ingredientes h1 {
         font-size: 30px;
-    }
-    .izquierda .random a img {
-        width: 100px;
-        height: 100px;
-    }
-    .izquierda {
-        margin: 5px;
     }
     .derecha {
         margin: 5px;
@@ -250,15 +238,6 @@ section h1 {
     .ingredientes h1 {
         font-size: 20px;
     }
-    .izquierda .random a img {
-        width: 150px;
-        height: 150px;
-        margin: 10px;
-    }
-    .izquierda {
-        width: 200px;
-        margin: 10px;
-    }
     .derecha {
         margin: 10px;
     }
@@ -266,23 +245,14 @@ section h1 {
 
 @media (min-width: 641px) {
     .transparent {
-        width: 84px;
-        height: 84px;
+        width: 50px;
+        height: 50px;
     }
     .resultadoshome h1 {
         font-size: 25px;
     }
     .ingredientes h1 {
         font-size: 25px;
-    }
-    .izquierda .random a img {
-        width: 150px;
-        height: 150px;
-        margin: 10px;
-    }
-    .izquierda {
-        width: 250px;
-        margin: 10px;
     }
     .derecha {
         margin: 10px;
@@ -297,26 +267,16 @@ section h1 {
         font-size: 30px;
     }
     .transparent {
-        width: 120px;
-        height: 120px;
-    }
-    .izquierda .random a img {
-        width: 200px;
-        height: 200px;
-        margin: 15px;
+        width: 50px;
+        height: 50px;
     }
     .pretable div {
-        width: 125px;
-        height: 170px;
+        width: 65px;
+        height: 100px;
         margin-bottom: 20px;
     }
     .pretable div p {
         margin-top: 5px;
-    }
-    .izquierda {
-        width: 300px;
-        margin: 15px;
-        margin-bottom: 10px;
     }
     .derecha {
         margin: 15px;
@@ -331,15 +291,6 @@ section h1 {
     .ingredientes h1 {
         font-size: 30px;
     }
-    .izquierda .random a img {
-        width: 250px;
-        height: 250px;
-        margin: 20px;
-    }
-    .izquierda {
-        width: 350px;
-        /* margin: 20px; */
-    }
     .derecha {
         margin: 20px;
     }
@@ -351,15 +302,6 @@ section h1 {
     }
     .ingredientes h1 {
         font-size: 30px;
-    }
-    .izquierda .random a img {
-        width: 300px;
-        height: 300px;
-        margin: 20px;
-    }
-    .izquierda {
-        width: 350px;
-        /*margin: 20px;*/
     }
     .derecha {
         margin: 20px;

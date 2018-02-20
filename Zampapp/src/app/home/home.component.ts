@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(private busquedaService:BusquedaService) { }
 
   ngOnInit() {
-    this.busquedaService.Busqueda
+    
     this.Escribir('');
     
   }
@@ -23,7 +23,10 @@ export class HomeComponent implements OnInit {
     this.filtrado = Categorias.filter((element, i) => {
       return element.value.indexOf(texto) >= 0;
     })
-    console.log(this.filtrado)
   }
+hola(){
+  console.log('Hola')
+}
+
 
 } 

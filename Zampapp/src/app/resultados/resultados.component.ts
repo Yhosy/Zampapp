@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PlatoService } from '../plato.service';
 import { ActivatedRoute} from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';
-import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import {FormsModule} from '@angular/forms';
 import  'rxjs/add/operator/map';
 
 
@@ -24,12 +24,6 @@ export class ResultadosComponent implements OnInit {
 	cantidad = ['para una persona','para compartir']
 	preferencias = ['sin gluten', 'sin frutos secos', 'sin lactosa', 'vegetariano', 'vegano', 'sin fructosa', 'sin azucar', 'sin huevo']
 
-	obj={
-		formData:{
-		op1:false,
-		op2:false,
-		op3:false,
-	}}
 
 	onCheckboxChange(categoria, event) {
 		if(event.target.checked) {

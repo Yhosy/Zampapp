@@ -9,8 +9,8 @@
             <br/>
         </div>
         <div class="subderecha">
-            <div class="pretable" *ngFor="let categoria of filtrado">
-                <div>
+            <div class="pretable" >
+                <div class="icono" *ngFor="let categoria of filtrado">
                     <input #input name='categoria' [value]=categoria.value type="checkbox" class="transparent" [id]=categoria.id>
                     <p>{{categoria.value}}</p>
                 </div>

@@ -46,25 +46,7 @@ export class ResultadosComponent implements OnInit {
 			console.log(platos);
 			this.platos = platos;
 
-			for(let i=0; i<this.busquedaService.Busqueda.categoria.length; i++){
-				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.categoria == this.busquedaService.Busqueda.categoria[i]));
-			}
-			for(let i=0; i<this.busquedaService.Busqueda.cantidad.length; i++){
-				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.cantidad == this.busquedaService.Busqueda.cantidad[i]));
-			}
-			for(let i=0; i<this.busquedaService.Busqueda.temperatura.length; i++){
-				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.temp == this.busquedaService.Busqueda.temperatura[i]));
-			}
-			for(let i=0; i<this.busquedaService.Busqueda.preferencia.length; i++){
-				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.preferencia == this.busquedaService.Busqueda.preferencia[i]));
-			}
-			for(let i=0; i<this.busquedaService.Busqueda.picante.length; i++){
-				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.pic == this.busquedaService.Busqueda.picante[i]));
-			}
-			/*this.listaFiltrada = this.listaFiltrada.reduce(function(acc, el, i, arr) {
-			  if (arr.indexOf(el) !== i && acc.indexOf(el) < 0) acc.push(el); return acc;
-			}, []);
-			console.log("lista filtrada", this.listaFiltrada);*/
+			this.onFilter();
 		});
 	}
 
@@ -77,27 +59,32 @@ export class ResultadosComponent implements OnInit {
 
 		if(this.busquedaService.Busqueda.cantidad !== null){
 			for(let i=0; i<this.busquedaService.Busqueda.cantidad.length; i++){
-				this.listaFiltrada = this.listaFiltrada.filter(plato => plato.cantidad == this.busquedaService.Busqueda.cantidad);
+				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.cantidad == this.busquedaService.Busqueda.cantidad[i]));
 			}
 		}
 
 		if(this.busquedaService.Busqueda.preferencia !== null){
 			for(let i=0; i<this.busquedaService.Busqueda.preferencia.length; i++){
-				this.listaFiltrada = this.listaFiltrada.filter(plato => plato.preferencia == this.busquedaService.Busqueda.preferencia);
+				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.preferencia == this.busquedaService.Busqueda.preferencia[i]));
 			}
 		}
 
 		if (this.busquedaService.Busqueda.picante !== null){
 			for(let i=0; i<this.busquedaService.Busqueda.picante.length; i++){
-				this.listaFiltrada = this.listaFiltrada.filter(plato =>  plato.pic == this.busquedaService.Busqueda.picante);
+				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.pic == this.busquedaService.Busqueda.picante[i]));
 			}
 		}
 
 		if (this.busquedaService.Busqueda.temperatura !== null){
 			for(let i=0; i<this.busquedaService.Busqueda.temperatura.length; i++){
-				this.listaFiltrada = this.listaFiltrada.filter(plato =>  plato.temp == this.busquedaService.Busqueda.temperatura);
+				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.temp == this.busquedaService.Busqueda.temperatura[i]));
 			}
 		}
+
+		this.listaFiltrada = this.listaFiltrada.reduce(function(acc, el, i, arr) {
+			  if (arr.indexOf(el) !== i && acc.indexOf(el) < 0) acc.push(el); return acc;
+			}, []);
+			console.log("lista filtrada", this.listaFiltrada)
 		return this.listaFiltrada;
 	}
 }

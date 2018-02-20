@@ -14,6 +14,8 @@ import { PlatosComponent } from './platos/platos.component';
 import { PreguntasComponent } from './preguntas/preguntas.component';
 import {PlatoDetailComponent} from './plato-detail/plato-detail.component';
 import { HttpModule } from '@angular/http';
+import { HoverDirective } from './hover.directive';
+
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { HttpModule } from '@angular/http';
     ResultadosComponent,
     PlatosComponent,
     PreguntasComponent,
-    PlatoDetailComponent
+    PlatoDetailComponent,
+    HoverDirective
   ],
   imports: [
     BrowserModule,

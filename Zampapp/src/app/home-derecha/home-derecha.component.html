@@ -1,0 +1,26 @@
+<div class="derecha">
+    <div class="ingredientes">
+        <h1>
+            ¡Sé lo que quiero!
+        </h1>
+        <div>
+            <label for="">Filtrar</label>
+            <input #searchBox type="text" id="search-box" value='' (keyup)="Escribir(searchBox.value)" />
+            <br/>
+        </div>
+        <div class="subderecha">
+            <div class="pretable" *ngFor="let categoria of filtrado">
+                <div>
+                    <input #input name='categoria' [value]=categoria.value type="checkbox" class="transparent" [id]=categoria.id>
+                    <p>{{categoria.value}}</p>
+                </div>
+            </div>
+            <div class="busqueda">
+                <a (click)="Hola()" routerLink="/Resultados">
+                    <img src="../../assets/img/icono/buscar.png" alt="" class="imgBusqueda" id="btnBusqueda">
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>

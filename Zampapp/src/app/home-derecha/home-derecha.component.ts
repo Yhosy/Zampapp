@@ -5,11 +5,11 @@ import { QueryList } from '@angular/core';
 import { Busqueda } from '../busqueda';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-home-derecha',
+  templateUrl: './home-derecha.component.html',
+  styleUrls: ['./home-derecha.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeDerechaComponent implements OnInit {
   @ViewChildren('input') elements: QueryList<ElementRef>;
   filtrado = [];
   constructor(private busquedaService: BusquedaService) { }
@@ -35,4 +35,5 @@ export class HomeComponent implements OnInit {
     });
     console.log(this.busquedaService.Busqueda);
   }
-} 
+
+}

@@ -15,6 +15,8 @@ import { PreguntasComponent } from './preguntas/preguntas.component';
 import {PlatoDetailComponent} from './plato-detail/plato-detail.component';
 import { HttpModule } from '@angular/http';
 import { HoverDirective } from './hover.directive';
+import { HomeIzquierdaComponent } from './home-izquierda/home-izquierda.component';
+import { HomeDerechaComponent } from './home-derecha/home-derecha.component';
 
 
 
@@ -28,7 +30,9 @@ import { HoverDirective } from './hover.directive';
     PlatosComponent,
     PreguntasComponent,
     PlatoDetailComponent,
-    HoverDirective
+    HoverDirective,
+    HomeIzquierdaComponent,
+    HomeDerechaComponent
   ],
   imports: [
     BrowserModule,

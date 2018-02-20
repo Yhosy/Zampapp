@@ -13,6 +13,7 @@ import {BusquedaService} from './busqueda.service';
 import { PlatosComponent } from './platos/platos.component';
 import { PreguntasComponent } from './preguntas/preguntas.component';
 import {PlatoDetailComponent} from './plato-detail/plato-detail.component';
+import {HttpModule} from '@angular/http'
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {PlatoDetailComponent} from './plato-detail/plato-detail.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [BusquedaService],
   bootstrap: [AppComponent]

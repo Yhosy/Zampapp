@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PlatoService } from './plato.service';
 
 
@@ -12,20 +12,16 @@ export class AppComponent implements OnInit {
 
   homedx;
 
-  ngOnInit(){
-	  this.homedx=false;
-	}
-  
+  ngOnInit() {
+    this.homedx = false;
+  }
+
   hola() {
-    console.log('hola');
-    this.homedx=true;
+    this.homedx = true;
   }
 
-  adios(){
-    console.log('adios');
-    
-    this.homedx=false;
+  adios(event) {
+    this.homedx = event;
   }
 
-  title = 'Zampapp';
 }

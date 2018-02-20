@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChildren, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChildren, ElementRef, Output, EventEmitter  } from '@angular/core';
 import { Categorias } from '../categorias';
 import { BusquedaService } from '../busqueda.service'
 import { QueryList } from '@angular/core';
@@ -11,6 +11,7 @@ import { Busqueda } from '../busqueda';
 })
 export class HomeDerechaComponent implements OnInit {
   @ViewChildren('input') elements: QueryList<ElementRef>;
+  @Output() myControl = new EventEmitter();
   filtrado = [];
   constructor(private busquedaService: BusquedaService) { }
 
@@ -19,6 +20,7 @@ export class HomeDerechaComponent implements OnInit {
     this.Escribir('');
 
   }
+
 
   Escribir(texto) {
     this.filtrado = Categorias.filter((element, i) => {
@@ -34,6 +36,12 @@ export class HomeDerechaComponent implements OnInit {
       }
     });
     console.log(this.busquedaService.Busqueda);
+    this.adios();
+  }
+
+  adios(){
+    console.log('adios')
+    this.myControl.emit(false);
   }
 
 }

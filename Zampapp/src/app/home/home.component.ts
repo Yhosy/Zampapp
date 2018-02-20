@@ -27,18 +27,14 @@ export class HomeComponent implements OnInit {
   }
 
   Hola(e) {
-    // let patata=this.elements;
-    // console.log('patata',patata.)
+
+    this.elements.forEach(x=>{
+      console.log(x.nativeElement.checked);
+    });
     this.busquedaService.Busqueda=new Busqueda;
-    
     let inputs = document.getElementsByClassName('transparent');
     for (var i = 0; i < inputs.length; i++) {
       this.busquedaService.Busqueda.categoria.push(inputs[i].attributes[4].value); 
     }
-    let patata=[];
-    for (var i = 0; i < inputs.length; i++) {
-      patata.push(inputs[i]); 
-    }
-    console.log(inputs)
   }
 } 

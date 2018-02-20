@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(private busquedaService:BusquedaService) { }
 
   ngOnInit() {
-
+    this.busquedaService.Busqueda
     this.Escribir('');
     
   }

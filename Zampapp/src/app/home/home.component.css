@@ -5,7 +5,9 @@
     margin: 0px;
     font-size: 15pt;
 }
-
+input[type="checkbox"]{
+    opacity: 1 !important;
+}
 h3 {
     font-size: 40px;
     font-weight: 700;
@@ -105,8 +107,8 @@ body {
     -moz-appearance: none;
 }
 
-.home .pretable div #catpizza {
-    content: url("../../assets/img/comida/pizza.png");
+#catpizza {
+    content: url("/assets/img/comida/pizza.png");
 }
 
 .home .pretable div #cathamburguesa {
@@ -157,8 +159,8 @@ body {
     content: url("../../assets/img/comida/varios.png");
 }
 
-.home .pretable div #catpizza:checked {
-    content: url("../../assets/img/comida/pizza2.png");
+#catpizza:checked {
+    content: url("/assets/img/comida/pizza2.png");
 }
 
 .home .pretable div #cathamburguesa:checked {

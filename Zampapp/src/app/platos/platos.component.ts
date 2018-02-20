@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
-import { Plato } from '../plato';
 
 @Component({
   selector: 'app-platos',
@@ -8,7 +7,12 @@ import { Plato } from '../plato';
   styleUrls: ['./platos.component.css']
 })
 export class PlatosComponent implements OnInit {
-platos: Plato[];
+	@Input() plato;
+	isMarcked = false;
+
+	onClick() {
+		this.isMarcked = true;
+	}
   constructor() { }
 
   ngOnInit() {

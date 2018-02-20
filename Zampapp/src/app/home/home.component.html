@@ -24,12 +24,12 @@
                     <br/>
                 </div>
                 <div class="subderecha">
-                    <div class="pretable" *ngFor="let categoria of filtrado">
-                        <div>
+                    <div class="pretable" >
+                        <!-- *ngFor="let categoria of filtrado"<div>
                             <input name='categoria' [value]=categoria.value type="checkbox" class="transparent" [id]=categoria.id>
                             <p>{{categoria.value}}</p>
-                        </div>
-                        <!-- <div>
+                        </div> -->
+                        <div>
                             <input name='categoria' value='pizzas' type="checkbox" class="transparent" id="catpizza">
                             <p>Pizza</p>
                         </div>
@@ -76,7 +76,7 @@
                         <div>
                             <input name='categoria' value='varios' type="checkbox" class="transparent" id="catvarios">
                             <p>Varios</p>
-                        </div> -->
+                        </div>
                     </div>
                     <div class="busqueda">
                         <a routerLink="/Resultados" ng-click="myFunc()">

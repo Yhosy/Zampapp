@@ -13,6 +13,10 @@ import {BusquedaService} from './busqueda.service';
 import { PlatosComponent } from './platos/platos.component';
 import { PreguntasComponent } from './preguntas/preguntas.component';
 import {PlatoDetailComponent} from './plato-detail/plato-detail.component';
+import { HttpModule } from '@angular/http';
+import { HoverDirective } from './hover.directive';
+
+
 
 @NgModule({
   declarations: [
@@ -23,12 +27,14 @@ import {PlatoDetailComponent} from './plato-detail/plato-detail.component';
     ResultadosComponent,
     PlatosComponent,
     PreguntasComponent,
-    PlatoDetailComponent
+    PlatoDetailComponent,
+    HoverDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [BusquedaService],
   bootstrap: [AppComponent]

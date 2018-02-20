@@ -1,4 +1,5 @@
 import { Component, OnInit, Input} from '@angular/core';
+import { Plato } from '../plato';
 
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit, Input} from '@angular/core';
   styleUrls: ['./platos.component.css']
 })
 export class PlatosComponent implements OnInit {
-	@Input() plato;
+	@Input() plato: Plato [];
 	isMarcked = false;
 
 	onClick() {

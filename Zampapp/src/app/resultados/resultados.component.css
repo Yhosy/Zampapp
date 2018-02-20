@@ -1,3 +1,7 @@
+#result{
+	display: flex;
+}
+
 .cat{
 	height: auto;
 }
@@ -11,9 +15,28 @@
 	width: 200px;
 	border: 4px #566573 solid;
 	padding: 10px;
-	display: inline-block;
+	  border-radius: 3px;
 }
 
-.table{
-	display: inline-block;
+.resultados{
+	vertical-align: top;
 }	
+
+#result input, #result select {
+  cursor: pointer;
+  color: #C0CA33;
+  border: 1px #C0CA33 solid;
+  padding-left: 3px;
+}
+
+#result .resultados {
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 5px;
+  background-color: white;
+}
+
+.input-field{
+	height: 100px;
+}

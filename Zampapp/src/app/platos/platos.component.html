@@ -3,10 +3,10 @@
 		<div class="card-image">
 			<a routerLink="/detail/{{ plato.id }}">
 				<img src="{{ plato.foto }}">
-				<span 
+				<h6 
 				[ngClass] = "{'marcked': isMarcked}"
 				class="card-title"
-				>{{ plato.nombre | uppercase}}</span>
+				>{{ plato.nombre | uppercase}}</h6>
 			</a>
 		</div>
 		<div class="card-content">
@@ -20,3 +20,5 @@
 		</div>
 	</div>
 </div>
+
+

@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { PlatoService } from '../plato.service';
 import { ActivatedRoute} from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';
-import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import {FormsModule} from '@angular/forms';
 import  'rxjs/add/operator/map';
-
+import { BusquedaService } from '../busqueda.service'
 
 
 @Component({
@@ -16,35 +16,20 @@ export class ResultadosComponent implements OnInit {
 
     platos = [];
     public valores = {categoria: [], cantidad: [], preferencia: [], temp: [], pic: [], precio:[], proximidad:[]}
-	searchStr="";
-	search2Str="";
 	listaFiltrada=[];
 
 	categorias = ['pizzas','hamburguesas', 'arroces', 'ensaladas', 'pastas', 'carnes', 'sopas', 'sushi']
 	cantidad = ['para una persona','para compartir']
 	preferencias = ['sin gluten', 'sin frutos secos', 'sin lactosa', 'vegetariano', 'vegano', 'sin fructosa', 'sin azucar', 'sin huevo']
 
-	obj={
-		formData:{
-		op1:false,
-		op2:false,
-		op3:false,
-	}}
 
 	onCheckboxChange(categoria, event) {
-		if(event.target.checked) {
-		  this.valores[event.target.name].push(event.target.value);
-		} else {
-		  for(var i=0 ; i < event.target.name.length; i++) {
-		    if(this.valores[event.target.name][i] == event.target.value){
-		      this.valores[event.target.name].splice(i,1);
-		    }
-		  }
-		}
-		return this.valores;
+		 let inputs = document.getElementsByClassName('transparent');
+	     this.busquedaService.Busqueda[event.target.name].push(event.target.value); 
+	     console.log(this.busquedaService.Busqueda);
 	}
 
-	constructor(private platoService: PlatoService){
+	constructor(private platoService: PlatoService, private busquedaService: BusquedaService){
 	}
 	
 
@@ -57,33 +42,33 @@ export class ResultadosComponent implements OnInit {
 	}
 
 	onFilter(){
-		if(this.valores.categoria !== null){
-			for(let i=0; i<this.valores.categoria.length; i++){
-				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.categoria == this.valores.categoria[i]));
+		if(this.busquedaService.Busqueda.categoria !== null){
+			for(let i=0; i<this.busquedaService.Busqueda.categoria.length; i++){
+				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.categoria == this.busquedaService.Busqueda.categoria[i]));
 			}
 		}
 
-		if(this.valores.cantidad !== null){
-			for(let i=0; i<this.valores.cantidad.length; i++){
-				this.listaFiltrada = this.listaFiltrada.filter(plato => plato.cantidad == this.valores.cantidad);
+		if(this.busquedaService.Busqueda.cantidad !== null){
+			for(let i=0; i<this.busquedaService.Busqueda.cantidad.length; i++){
+				this.listaFiltrada = this.listaFiltrada.filter(plato => plato.cantidad == this.busquedaService.Busqueda.cantidad);
 			}
 		}
 
-		if(this.valores.preferencia !== null){
-			for(let i=0; i<this.valores.preferencia.length; i++){
-				this.listaFiltrada = this.listaFiltrada.filter(plato => plato.preferencia == this.valores.preferencia);
+		if(this.busquedaService.Busqueda.preferencia !== null){
+			for(let i=0; i<this.busquedaService.Busqueda.preferencia.length; i++){
+				this.listaFiltrada = this.listaFiltrada.filter(plato => plato.preferencia == this.busquedaService.Busqueda.preferencia);
 			}
 		}
 
-		if (this.valores.pic !== null){
-			for(let i=0; i<this.valores.pic.length; i++){
-				this.listaFiltrada = this.listaFiltrada.filter(plato =>  plato.pic == this.valores.pic);
+		if (this.busquedaService.Busqueda.picante !== null){
+			for(let i=0; i<this.busquedaService.Busqueda.picante.length; i++){
+				this.listaFiltrada = this.listaFiltrada.filter(plato =>  plato.pic == this.busquedaService.Busqueda.picante);
 			}
 		}
 
-		if (this.valores.temp !== null){
-			for(let i=0; i<this.valores.temp.length; i++){
-				this.listaFiltrada = this.listaFiltrada.filter(plato =>  plato.temp == this.valores.temp);
+		if (this.busquedaService.Busqueda.temperatura !== null){
+			for(let i=0; i<this.busquedaService.Busqueda.temperatura.length; i++){
+				this.listaFiltrada = this.listaFiltrada.filter(plato =>  plato.temp == this.busquedaService.Busqueda.temperatura);
 			}
 		}
 		return this.listaFiltrada;

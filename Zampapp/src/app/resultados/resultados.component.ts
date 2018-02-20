@@ -8,11 +8,11 @@ import  'rxjs/add/operator/map';
 
 
 @Component({
-  selector: 'app-home-page',
-  templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css']
+  selector: 'app-resultados',
+  templateUrl: './resultados.component.html',
+  styleUrls: ['./resultados.component.css']
 })
-export class HomePageComponent implements OnInit {
+export class ResultadosComponent implements OnInit {
 
     platos = [];
     public valores = {categoria: [], cantidad: [], preferencia: [], temp: [], pic: [], precio:[], proximidad:[]}
@@ -44,13 +44,13 @@ export class HomePageComponent implements OnInit {
 		return this.valores;
 	}
 
-	constructor(private usersService: UsersService){
+	constructor(private platoService: PlatoService){
 	}
 	
 
 	ngOnInit(){
 		//this.users = this.usersService.users
-		this.usersService.getUsers().subscribe(platos => {
+		this.platoService.getPlatos().subscribe(platos => {
 			console.log(platos);
 			this.platos = platos;
 		});

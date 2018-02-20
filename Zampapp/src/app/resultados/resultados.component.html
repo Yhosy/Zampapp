@@ -3,7 +3,7 @@
     <h6>Categorías</h6>
     <form action="#">
       <p *ngFor="let categoria of categorias">
-        <input [(ngModel)]="categoria.checked" type="checkbox" name="categoria" [id]="categoria" [value]="categoria" (click)="onCheckboxChange(categoria,$event)" />
+        <input ngModel type="checkbox" name="categoria" [id]="categoria" [value]="categoria" (click)="onCheckboxChange(categoria,$event)" />
         <label [for]="categoria">{{categoria}}</label>
       </p>
     </form>
@@ -14,7 +14,7 @@
     <h6>Cantidad</h6>
     <form action="#">
       <p *ngFor="let cantidad of cantidad">
-        <input [(ngModel)]="cantidad.checked" type="checkbox" name="cantidad" [id]="cantidad" [value]="cantidad" (click)="onCheckboxChange(cantidad,$event)"/>
+        <input ngModel type="checkbox" name="cantidad" [id]="cantidad" [value]="cantidad" (click)="onCheckboxChange(cantidad,$event)"/>
         <label [for]="cantidad">{{cantidad}}</label>
       </p>
     </form>
@@ -24,7 +24,7 @@
     <h6>Preferencia</h6>
     <form action="#">
       <p *ngFor="let preferencia of preferencias">
-        <input [(ngModel)]="preferencia.checked" type="checkbox" name="preferencia" [id]="preferencia" [value]="preferencia" (click)="onCheckboxChange(preferencia,$event)"/>
+        <input ngModel type="checkbox" name="preferencia" [id]="preferencia" [value]="preferencia" (click)="onCheckboxChange(preferencia,$event)"/>
         <label [for]="preferencia">{{preferencia}}</label>
       </p>
     </form>
@@ -35,13 +35,13 @@
 
 <div class="table">
   <div class="row">
-    <app-user 
+    <app-platos 
 
     *ngFor = "let plato of listaFiltrada"
     [plato] = "plato"
-    ></app-user>
+    ></app-platos>
 
-    <app-product-details></app-product-details>
-    <!--<router-outlet></router-outlet>-->   
+    <!--<app-product-details></app-product-details>
+    <router-outlet></router-outlet>-->   
   </div>
 </div>

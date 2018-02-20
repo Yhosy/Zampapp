@@ -8,6 +8,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ResultadosComponent } from './resultados/resultados.component';
+import { PlatosComponent } from './platos/platos.component';
+import  { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+
 
 
 @NgModule({
@@ -16,7 +19,8 @@ import { ResultadosComponent } from './resultados/resultados.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ResultadosComponent
+    ResultadosComponent,
+    PlatosComponent
   ],
   imports: [
     BrowserModule,

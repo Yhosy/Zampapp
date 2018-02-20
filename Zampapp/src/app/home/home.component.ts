@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Categorias } from '../categorias';
-import {BusquedaService} from '../busqueda.service'
+import { BusquedaService } from '../busqueda.service'
 
 @Component({
   selector: 'app-home',
@@ -11,12 +11,12 @@ export class HomeComponent implements OnInit {
 
   filtrado = [];
   valores = {};
-  constructor(private busquedaService:BusquedaService) { }
+  constructor(private busquedaService: BusquedaService) { }
 
   ngOnInit() {
-    
+
     this.Escribir('');
-    
+
   }
 
   Escribir(texto) {
@@ -24,9 +24,14 @@ export class HomeComponent implements OnInit {
       return element.value.indexOf(texto) >= 0;
     })
   }
-hola(){
-  console.log('Hola')
-}
+
+  Hola(e) {
+    let inputs = document.getElementsByClassName('transparent')
+    for (var i = 0; i < inputs.length; i++) {
+      this.busquedaService.Busqueda.categoria.push(JSON.stringify (inputs[i].attributes[4].value)) 
+    }
+    console.log(this.busquedaService.Busqueda);
+  }
 
 
 } 

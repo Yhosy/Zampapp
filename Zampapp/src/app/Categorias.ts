@@ -2,17 +2,17 @@ import{ Categoria} from './categoria'
 
 export const Categorias: Categoria[] = [
 
-    new Categoria('pizza'),
-    new Categoria('hamburguesa'),
-    new Categoria('bocadillo'),
-    new Categoria('ensalada'),
-    new Categoria('sopa'),
-    new Categoria('carne'),
-    new Categoria('pescado'),
-    new Categoria('pasta'),
-    new Categoria('kebab'),
-    new Categoria('sushi'),
-    new Categoria('arroz'),
+    new Categoria('pizzas'),
+    new Categoria('hamburguesas'),
+    new Categoria('bocadillos'),
+    new Categoria('ensaladas'),
+    new Categoria('sopas'),
+    new Categoria('carnes'),
+    new Categoria('pescados'),
+    new Categoria('pastas'),
+    new Categoria('kebabs'),
+    new Categoria('sushis'),
+    new Categoria('arrozes'),
     new Categoria('varios')
         
 ];

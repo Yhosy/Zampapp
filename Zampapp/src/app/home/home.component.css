@@ -7,6 +7,7 @@
 }
 input[type="checkbox"]{
     opacity: 1 !important;
+    position: inherit;
 }
 h3 {
     font-size: 40px;

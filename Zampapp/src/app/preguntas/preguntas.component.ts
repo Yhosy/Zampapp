@@ -32,7 +32,7 @@ export class PreguntasComponent implements OnInit {
       };
     };
     if (contador == 0) {
-      alert("algo te falta por rellenar, aunque sea rellena todos los campos");
+      alert("Algo te falta por rellenar, aunque sea rellena algo please, ¡¡¡X tus ZampApp's!!!");
       return false;
     } else {
       return true;

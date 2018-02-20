@@ -11,12 +11,12 @@ export class HomeComponent implements OnInit {
 
   filtrado = [];
   valores = {};
-  constructor() { }
+  constructor(private busquedaService:BusquedaService) { }
 
   ngOnInit() {
 
     this.Escribir('');
-    console.log(BusquedaService.CogerFiltrador());
+    
   }
 
   Escribir(texto) {

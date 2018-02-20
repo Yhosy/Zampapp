@@ -2,6 +2,7 @@ import{ Categoria} from './categoria'
 
 export class Busqueda {
     constructor() {
+
         this.categoria=[];
         this.cantidad=[];
         this.preferencia=[];
@@ -9,13 +10,15 @@ export class Busqueda {
         this.picante=[];
         this.precio=0;
         this.proximidad=0;
+
     }
 
-    categoria: any;
-    cantidad: any;
-    preferencia: any;
-    temperatura: any;
-    picante: any;
+    categoria: string[];
+    cantidad: string[];
+    preferencia: string[];
+    temperatura: string[];
+    picante: string[];
     precio:number;
     proximidad: number;
+
 }

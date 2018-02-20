@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ResultadosComponent } from './resultados/resultados.component';
+import {BusquedaService} from './busqueda.service';
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { ResultadosComponent } from './resultados/resultados.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [BusquedaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

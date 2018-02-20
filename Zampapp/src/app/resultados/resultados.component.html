@@ -9,7 +9,7 @@
         </p>
         <h6>Cantidad</h6>
         <p *ngFor="let cantidad of cantidad">
-          <input [(ngModel)]="cantidad.checked" type="checkbox" name="cantidad" [id]="cantidad" [value]="cantidad" (click)="onCheckboxChange(cantidad,$event)"/>
+          <input [(ngModel)]="cantidad.checked" type="checkbox" name="cantidad" required [id]="cantidad" [value]="cantidad" (click)="onCheckboxChange(cantidad,$event)"/>
           <label [for]="cantidad">{{cantidad}}</label>
         </p>
         <h6>Preferencia</h6>

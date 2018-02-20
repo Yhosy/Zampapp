@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'Home', component: HomeComponent },
   { path: 'Resultados', component: ResultadosComponent },
   { path: 'Preguntas', component: PreguntasComponent },
-  { path: 'pagplato', component: PlatoDetailComponent }
+  { path: 'detail/:id', component: PlatoDetailComponent }
 ];
  
 @NgModule({

@@ -348,7 +348,7 @@ body {
         /* margin: 20px; */
     }
     .home .derecha {
-        /* margin: 20px; */
+        margin: 20px;
     }
 }
 
@@ -366,9 +366,9 @@ body {
     }
     .home .izquierda {
         width: 350px;
-        /* margin: 20px; */
+        /*margin: 20px;*/
     }
     .home .derecha {
-        /* margin: 20px; */
+        margin: 20px;
     }
 }

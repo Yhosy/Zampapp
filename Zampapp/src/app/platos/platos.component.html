@@ -1,24 +1,26 @@
-<div class="col s2">
-	<div class="card" appHover>
-		<div class="card-image">
-			<a routerLink="/detail/{{ plato.id }}">
-				<img src="{{ plato.foto }}">
-				<h6 
-				[ngClass] = "{'marcked': isMarcked}"
-				class="card-title"
-				>{{ plato.nombre | uppercase}}</h6>
+
+
+<div class="divTableCell" >
+	<div class="flipper" appHover>
+		<div class="front"> 
+			<h3>{{plato.nombre}}</h3> 
+			<img src="{{plato.foto}}">  
+			<div class="precio">  
+				<p>{{plato.precio | currency:'EUR':true}}</p> 
+			</div> 
+		</div> 
+		<div class="back"> 
+			<a href="" routerLink="/detail/{{ plato.id }}">
+				<h5>Descripción</h5> 
+				<p>{{plato.descripcion}}</p>  
+				<h5>Restaurante</h5>  
+				<p>{{plato.restaurante}}</p>  
+				<div class="precio"> 
+					<p>{{plato.precio | currency:'EUR'}}</p>
+				</div>
 			</a>
 		</div>
-		<div class="card-content">
-			<p>{{ plato.restaurante }}</p>
-		</div>
-		<div class="card-action">
-			<a 
-			(click) = "onClick()"
-			class="waves-effect waves-light btn"
-			>Añadir</a>
-		</div>
-	</div>
+	</div>  
+	<input type="number" size="3" name="num" min="1" max="100" value="0"/>
+	<button class="añadir"></button>
 </div>
-
-

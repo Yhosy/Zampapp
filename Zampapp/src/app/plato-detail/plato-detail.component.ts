@@ -10,6 +10,7 @@ import { ResultadosComponent } from '../resultados/resultados.component';
   styleUrls: ['./plato-detail.component.css']
 })
 export class PlatoDetailComponent implements OnInit {
+	@Input() plato;
 
   /*plato={
 		nombre: 'Pizza Carbonara Cebolla',
@@ -37,7 +38,7 @@ export class PlatoDetailComponent implements OnInit {
 	}*/
 
   constructor(
-	private route: ActivatedRoute,
+	  private route: ActivatedRoute,
 	  private platoService: PlatoService,
 	  private location: Location
   	) { }

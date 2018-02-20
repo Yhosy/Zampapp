@@ -46,7 +46,7 @@ export class PreguntasComponent implements OnInit {
       this.busquedaService.Busqueda = new Busqueda;
       // break;
     } else {
-      this.router.navigate(['Home']);
+      this.router.navigate(['Resultados']);
     }
     console.log("fin select");
     console.log(this.busquedaService.Busqueda);

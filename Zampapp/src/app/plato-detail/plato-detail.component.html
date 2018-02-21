@@ -1,22 +1,53 @@
-<div *ngIf=plato class="container">
-  <h2>{{ plato.nombre }}</h2>
-  <div class="row">
-    <div class="col s5">
+<section>
+  <div *ngIf=plato class="container sectplato">
+    <h3>{{ plato.nombre }}</h3>
+    <div class="sizquierda">
+      <img [src]="plato.foto" [alt]="plato.nombre" class="responsive-img">
+      <h5>Puntuación:4/5</h5>
+    </div>
+    <div class="sderecha">
+      <div class="caracteristicas">
+        <h5>Restaurante:</h5>
+        <p>{{ plato.restaurante }}</p>
+      </div>
+      <div class="caracteristicas">
+        <h5>Descripción: </h5>
+        <p>{{plato.descripcion}}</p>
+      </div>
+      <div class="caracteristicas">
+        <h5>Precio: </h5>
+        <p>{{plato.precio}}</p>
+      </div>
+      <div class="caracteristicas">
+        <h5>Ingredientes: </h5>
+        <div *ngFor="let ing of plato.ingredientes">
+          <input type="checkbox">
+          <label for="">{{ing| uppercase}}</label>
+        </div>
+      </div>
+      <label>Cantidad</label>
+      <input type="number" name="quantity" min="1" max="10">
+      <button>Comprar</button>
+    </div>
+  </div>
+  <div class="sugerencias">
+    <div class="sectplatosimilares">
+
+      <h5>Platos similares:</h5>
       <div>
-        <img [src]="plato.foto" [alt]="plato.nombre" class="responsive-img">
+        <img class="imgsmall" src="https://images.telepizza.com/vol/es/images/content/productos/pcar_c.png">
+        <img class="imgsmall" src="https://images.telepizza.com/vol/es/images/content/productos/pcar_c.png">
+        <img class="imgsmall" src="https://images.telepizza.com/vol/es/images/content/productos/pcar_c.png">
       </div>
     </div>
-
-    <div class="col s3">
-      <h3>Restaurante:</h3>
-      <p>{{ plato.restaurante }}</p>
-      <h3>Descripción: </h3>
-      <p>{{plato.descripcion}}</p>
-      <h3>Ingredientes: </h3>
-      <div *ngFor="let ing of plato.ingredientes" >
-        <input type="checkbox">
-        <label for="">{{ing| uppercase}}</label>
+    <div class="sectplatosrestaurante">
+      <h5>Platos del mismo restaurante:</h5>
+      <div>
+        <img class="imgsmall" src="https://images.telepizza.com/vol/es/images/content/productos/pcar_c.png">
+        <img class="imgsmall" src="https://images.telepizza.com/vol/es/images/content/productos/pcar_c.png">
+        <img class="imgsmall" src="https://images.telepizza.com/vol/es/images/content/productos/pcar_c.png">
       </div>
     </div>
   </div>
-</div>
+  
+</section>

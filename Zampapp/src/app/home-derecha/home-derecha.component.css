@@ -49,7 +49,7 @@ section h1 {
     margin: 20px;
     margin-bottom: 10px;
     border: 4px #566573 solid;
-    position: absolute;
+    position: fixed;
     right: 0px;
     top: 10%;
     width: 250px;
@@ -88,7 +88,7 @@ section h1 {
 }
 
 .icono {
-    width:50px;
+    width: 50px;
     display: inline-block
 }
 
@@ -236,6 +236,9 @@ section h1 {
 }
 
 @media (min-width: 481px) {
+    .icono {
+        margin: 5px
+    }
     .resultadoshome h1 {
         font-size: 20px;
     }
@@ -248,7 +251,6 @@ section h1 {
 }
 
 @media (min-width: 641px) {
-
     .resultadoshome h1 {
         font-size: 25px;
     }
@@ -267,7 +269,6 @@ section h1 {
     .ingredientes h1 {
         font-size: 30px;
     }
-
     .pretable div {
         width: 65px;
         height: 100px;

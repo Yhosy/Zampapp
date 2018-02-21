@@ -45,7 +45,9 @@ export class ResultadosComponent implements OnInit {
 		this.platoService.getPlatos().subscribe(platos => {
 			console.log(platos);
 			this.platos = platos;
-
+      for(let i=0; i<this.busquedaService.Busqueda.categoria.length; i++){
+				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.categoria == this.busquedaService.Busqueda.categoria[i]));
+			}
 			this.onFilter();
 		});
 	}

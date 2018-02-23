@@ -1,8 +1,9 @@
-<section>
+<section class= "detalles">
   <div *ngIf=plato class="container sectplato">
-    <h3>{{ plato.nombre }}</h3>
+
     <div class="sizquierda">
-      <img [src]="plato.foto" [alt]="plato.nombre" class="responsive-img">
+      <h3>{{ plato.nombre }}</h3>
+      <img [src]="plato.foto" [alt]="plato.nombre" class="img-principal">
       <h5>Puntuación:4/5</h5>
     </div>
     <div class="sderecha">
@@ -48,6 +49,9 @@
         <img class="imgsmall" src="https://images.telepizza.com/vol/es/images/content/productos/pcar_c.png">
       </div>
     </div>
+    <div class="publicidad">
+      publicidad del restaurante
+    </div>
   </div>
-  
+
 </section>

@@ -17,7 +17,7 @@ export const PLATOS: Plato[] = [
 		cantidad: 'para una persona',
 		pic: 'picante',
 		temp: 'caliente',
-		preferencia: ['sin huevo', 'sin frutos secos', 'sin azucar'],
+		preferencia: ['sin huevo', 'sin frutos secos', 'sin azucar', 'sin fructosa'],
 		foto: 'https://res.cloudinary.com/hesvvq3zo/image/upload/w_1000,h_500,c_pad,q_30/v1477472361/takeaway/Le-Pizze-Pepperoni.jpg',
 		valoracion: '5/5'
 	},
@@ -37,7 +37,7 @@ export const PLATOS: Plato[] = [
 		cantidad: 'para una persona',
 		pic: 'nada picante',
 		temp: 'caliente',
-		preferencia: ['sin huevo', 'sin frutos secos', 'sin azucar', 'vegetariano'],
+		preferencia: ['sin huevo', 'sin frutos secos', 'sin azucar', 'vegetariano', 'sin fructosa'],
 		foto: 'https://res.cloudinary.com/hesvvq3zo/image/upload/w_1000,h_500,c_pad,q_30/v1477472361/takeaway/Le-Pizze-4formaggi.jpg',
 		valoracion: '4/5'
 	},
@@ -56,7 +56,7 @@ export const PLATOS: Plato[] = [
 		cantidad: 'para una persona',
 		pic: 'nada picante',
 		temp: 'caliente',
-		preferencia: ['sin frutos secos', 'sin azucar'],
+		preferencia: ['sin frutos secos', 'sin azucar', 'sin fructosa'],
 		foto: 'https://images.telepizza.com/vol/es/images/content/productos/pcaq_c.png',
 		valoracion: '4/5'
 	},
@@ -75,7 +75,7 @@ export const PLATOS: Plato[] = [
 		cantidad: 'para una persona',
 		pic: 'nada picante',
 		temp: 'caliente',
-		preferencia: ['sin huevo', 'sin frutos secos'],
+		preferencia: ['sin huevo', 'sin frutos secos', 'sin fructosa'],
 		foto: 'https://images.telepizza.com/vol/es/images/content/productos/bolo_c.png',
 		valoracion: '4/5'
 	},
@@ -95,7 +95,7 @@ export const PLATOS: Plato[] = [
 		cantidad: 'para compartir',
 		pic: 'nada picante',
 		temp: 'caliente',
-		preferencia: ['sin huevo', 'sin frutos secos', 'sin azucar'],
+		preferencia: ['sin huevo', 'sin frutos secos', 'sin azucar', 'sin fructosa'],
 		foto: 'https://images.telepizza.com/vol/es/images/content/productos/phw_c.png',
 		valoracion: '3/5'
 	},
@@ -116,7 +116,7 @@ export const PLATOS: Plato[] = [
 		cantidad: 'para compartir',
 		pic: 'nada picante',
 		temp: 'caliente',
-		preferencia: ['sin frutos secos', 'sin azucar'],
+		preferencia: ['sin frutos secos', 'sin azucar', 'sin fructosa'],
 		foto: 'https://images.telepizza.com/vol/es/images/content/productos/pcar_c.png',
 		valoracion: '4/5'
 	},
@@ -368,7 +368,7 @@ export const PLATOS: Plato[] = [
 		cantidad: 'para una persona',
 		pic: 'agridulce',
 		temp: 'caliente',
-		preferencia: ['sin frutos secos', 'sin azucar'],
+		preferencia: ['sin frutos secos', 'sin azucar', , 'sin fructosa'],
 		foto: 'http://www.udon.es/products/images/Miso_Soup_G_1.jpg',
 		valoracion: '4/5'
 	},
@@ -436,7 +436,7 @@ export const PLATOS: Plato[] = [
 		cantidad: 'para una persona',
 		pic: 'agridulce',
 		temp: 'caliente',
-		preferencia: ['sin frutos secos', 'sin azucar', 'sin huevo'],
+		preferencia: ['sin frutos secos', 'sin azucar', 'sin huevo', 'sin fructosa'],
 		foto: 'http://www.udon.es/products/images/Yakimeshi_Don_G.jpg',
 		valoracion: '5/5'
 	},
@@ -521,7 +521,7 @@ export const PLATOS: Plato[] = [
 		cantidad: 'para una persona',
 		pic: 'nada picante',
 		temp: 'frío',
-		preferencia: ['sin huevo', 'sin lactosa', 'sin frutos secos'],
+		preferencia: ['sin huevo', 'sin lactosa', 'sin frutos secos', 'sin fructosa'],
 		foto: 'https://www.mcdonalds.es/sites/default/files/produits/mediterraneantuna477.png',
 		valoracion: '3/5'
 	},
@@ -640,7 +640,7 @@ export const PLATOS: Plato[] = [
 		cantidad: 'para una persona',
 		pic: 'nada picante',
 		temp: 'caliente',
-		preferencia: ['vegano', 'sin huevo', 'vegetariano', 'sin lactosa', 'sin frutos secos'],
+		preferencia: ['vegano', 'sin huevo', 'vegetariano', 'sin lactosa', 'sin frutos secos', 'sin fructosa'],
 		foto: 'http://www.latrocadero.com/wp-content/uploads/2017/10/falburger-300x261.png',
 		valoracion: '4/5'
 	},

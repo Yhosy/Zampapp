@@ -17,6 +17,7 @@ import { HttpModule } from '@angular/http';
 import { HoverDirective } from './hover.directive';
 import { HomeIzquierdaComponent } from './home-izquierda/home-izquierda.component';
 import { HomeDerechaComponent } from './home-derecha/home-derecha.component';
+import { CestaComponent } from './cesta/cesta.component';
 
 
 
@@ -32,7 +33,8 @@ import { HomeDerechaComponent } from './home-derecha/home-derecha.component';
     PlatoDetailComponent,
     HoverDirective,
     HomeIzquierdaComponent,
-    HomeDerechaComponent
+    HomeDerechaComponent,
+    CestaComponent
   ],
   imports: [
     BrowserModule,

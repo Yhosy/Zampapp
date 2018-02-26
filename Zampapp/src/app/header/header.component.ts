@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  cestadx;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  estadoCesta(event) {
+    this.cestadx = event;
   }
 
 }

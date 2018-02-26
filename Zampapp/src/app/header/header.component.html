@@ -16,10 +16,10 @@
         </a>
       </div>
       <div class="carro">
-        <a routerLink="">
-          <img src="../assets/img/icono/carrito.png" alt="carro">
-        </a>
+          <img src="../assets/img/icono/carrito.png" alt="carro" (click)="estadoCesta(true)">  
       </div>
     </div>
   </header>
 <div id="headerrelleno"></div>
+
+<app-cesta *ngIf="cestadx" (mouseleave) ="estadoCesta(false)"></app-cesta>

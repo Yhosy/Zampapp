@@ -15,14 +15,14 @@ import { Busqueda } from '../busqueda';
 })
 export class ResultadosComponent implements OnInit {
 	abierto=true;
-
-
     platos = [];
 	listaFiltrada=[];
 
 	categorias = ['pizzas','hamburguesas','bocadillos', 'arroces', 'ensaladas', 'pastas', 'carnes', 'pescados', 'sopas', 'sushi']
 	cantidad = ['para una persona','para compartir']
 	preferencias = ['sin gluten', 'sin frutos secos', 'sin lactosa', 'vegetariano', 'vegano', 'sin fructosa', 'sin azucar', 'sin huevo']
+
+
 
 	abrircerrar(){
 		this.abierto=this.abierto?false: true;
@@ -46,6 +46,10 @@ export class ResultadosComponent implements OnInit {
 	
 
 	ngOnInit(){
+
+		if(window.innerWidth>=480){
+			this.abierto=false;
+		}
 		
 		//this.users = this.usersService.users
 		this.platoService.getPlatos().subscribe(platos => {

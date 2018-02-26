@@ -11,32 +11,6 @@ import { ResultadosComponent } from '../resultados/resultados.component';
 })
 export class PlatoDetailComponent implements OnInit {
 	@Input() plato;
-
-  /*plato={
-		nombre: 'Pizza Carbonara Cebolla',
-		precio: 7,
-		restaurante: 'TelePizza',
-		ingredientes: [
-			'masa fresca',
-			'bacon',
-			'champiñon',
-			'salsa carbonara',
-			'mozzarella',
-			'cebolla',
-			'crema',
-			'carbonara',
-			'queso'
-		],
-		descripcion: 'Masa fresca, doble de bacon, champiñón, salsa carbonara, topping a base de mozzarella y cebolla',
-		categoria: 'pizzas',
-		cantidad: 'para compartir',
-		pic:'nada picante',
-		temp:'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://images.telepizza.com/vol/es/images/content/productos/pcar_c.png'
-	}*/
-
   constructor(
 	  private route: ActivatedRoute,
 	  private platoService: PlatoService,
@@ -56,3 +30,5 @@ export class PlatoDetailComponent implements OnInit {
 	}
 
 }
+
+

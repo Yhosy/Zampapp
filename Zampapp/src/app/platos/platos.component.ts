@@ -19,4 +19,8 @@ export class PlatosComponent implements OnInit {
   ngOnInit() {
   }
 
+  agregar_Cesta(){
+    console.log('llamado')
+  }
+
 }

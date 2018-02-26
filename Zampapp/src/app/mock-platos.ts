@@ -14,7 +14,7 @@ export const PLATOS: Plato[] = [
 		],
 		descripcion: 'Prueba la nueva Telepizza del mes Pepe Peperoni: doble ración de pepperoni y topping a base de mozzarella. ¿Podrás resistirte?',
 		categoria: 'pizzas',
-		cantidad: 'para una persona',
+		cantidad: 'para compartir',
 		pic: 'picante',
 		temp: 'caliente',
 		preferencia: ['sin huevo', 'sin frutos secos', 'sin azucar', 'sin fructosa'],
@@ -34,7 +34,7 @@ export const PLATOS: Plato[] = [
 		],
 		descripcion: 'Siente en tu paladar una fusión de sabores con nuestros mejores quesos y todo esto aderezado con tomate, simplemente espectacular.',
 		categoria: 'pizzas',
-		cantidad: 'para una persona',
+		cantidad: 'para compartir',
 		pic: 'nada picante',
 		temp: 'caliente',
 		preferencia: ['sin huevo', 'sin frutos secos', 'sin azucar', 'vegetariano', 'sin fructosa'],
@@ -53,7 +53,7 @@ export const PLATOS: Plato[] = [
 		],
 		descripcion: 'El inconfundible sabor de nuestra salsa carbonara con doble de bacon, champiñón y un extra de topping a base de mozzarella que la convierte en una elección segura.',
 		categoria: 'pizzas',
-		cantidad: 'para una persona',
+		cantidad: 'para compartir',
 		pic: 'nada picante',
 		temp: 'caliente',
 		preferencia: ['sin frutos secos', 'sin azucar', 'sin fructosa'],
@@ -72,7 +72,7 @@ export const PLATOS: Plato[] = [
 		],
 		descripcion: 'Doble ración de carne de vacuno, topping a base de mozzarella y extra de salsa de tomate confitado.',
 		categoria: 'pizzas',
-		cantidad: 'para una persona',
+		cantidad: 'para compartir',
 		pic: 'nada picante',
 		temp: 'caliente',
 		preferencia: ['sin huevo', 'sin frutos secos', 'sin fructosa'],
@@ -705,7 +705,7 @@ export const PLATOS: Plato[] = [
 			'dados de aguacate con sésamo'
 		],
 		descripcion: 'Salmón marinado con soja, limón, wasabi, aceite de sésamo y mirin. Marcado a la plancha, fileteado y acompañado con salsa teriyaki y dados de aguacate con sésamo',
-		categoria: 'pescado',
+		categoria: 'pescados',
 		cantidad: 'para una persona',
 		pic: 'picante',
 		temp: 'frio',
@@ -726,12 +726,32 @@ export const PLATOS: Plato[] = [
 			'salsa teriyaki'
 		],
 		descripcion: 'Lomo de buey macerado con soja, mirin y aceite de sésamo acompañado de chips de espinacas. Marcado a la plancha, fileteado y acompañado con salsa teriyaki',
-		categoria: 'carne',
+		categoria: 'carnes',
 		cantidad: 'para una persona',
 		pic: 'nada picante',
 		temp: 'frio',
 		preferencia: ['sin huevo', 'sin lactosa'],
 		foto: 'http://www.udon.es/products/images/Tataki_Buey_G.jpg',
+		valoracion: '4/5'
+	},
+	{
+		nombre: 'Top Sándwich York',
+		precio: 4.95,
+		restaurante: 'Telepizza',
+		ingredientes: [
+			'jamón york', 
+			'salsa especial', 
+			'bacon crispy', 
+			'queso edam', 
+			'queso cheddar'
+		],
+		descripcion: '¿Es una hamburguesa? ¿Es un bocadillo? Es nuestro sándwich de york acompañado con una salsa especial, york, bacon crispy,loncha queso edam y cheddar.',
+		categoria: 'bocadillos',
+		cantidad: 'para una persona',
+		pic: 'nada picante',
+		temp: 'caliente',
+		preferencia: ['sin huevo', 'sin lactosa'],
+		foto: 'https://images.telepizza.com/vol/es/images/content/productos/tsj_c.png',
 		valoracion: '4/5'
 	}
 ]

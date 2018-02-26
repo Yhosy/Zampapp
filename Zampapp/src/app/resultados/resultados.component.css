@@ -131,6 +131,10 @@ color: #C0CA33;
       display: block;
   }
 
+  .result{
+    display: block;
+  }
+
   .slider-horizontal{
     width: 95% !important;
   }
@@ -154,11 +158,13 @@ color: #C0CA33;
 }
 
 @media screen and (min-width:481px) {
+
+
   .result .resultados {
       width: 78%;
   }
   .result div.filtro {
-    height: 560px;
+    height: 870px;
     width: 250px;
 }
   #responsiveBusqueda{

@@ -1,6 +1,8 @@
-<div class="result"> 
-  <div class="filtro">  
-    <div id="divEscondido">
+<div class="result">			
+  <div class="filtro">
+    <button (click)="abrircerrar()" id="responsiveBusqueda">Minimizar búsqueda avanzada</button>
+    
+    <div id="divfantasma" *ngIf="abierto">
       <h2>Búsqueda avanzada</h2>
       <form action="#">
         <h6>Categorías</h6>
@@ -23,8 +25,6 @@
         </p>
       </form>
     </div>
-
-
   <div class="button"><button (click)=onFilter()>Submit</button></div>
   </div>
 

@@ -13,14 +13,19 @@ import { BusquedaService } from '../busqueda.service'
   styleUrls: ['./resultados.component.css']
 })
 export class ResultadosComponent implements OnInit {
+	abierto=true;
+
 
     platos = [];
 	listaFiltrada=[];
 
-	categorias = ['pizzas','hamburguesas', 'arroces', 'ensaladas', 'pastas', 'carnes', 'sopas', 'sushi']
+	categorias = ['pizzas','hamburguesas','bocadillos', 'arroces', 'ensaladas', 'pastas', 'carnes', 'pescados', 'sopas', 'sushi']
 	cantidad = ['para una persona','para compartir']
 	preferencias = ['sin gluten', 'sin frutos secos', 'sin lactosa', 'vegetariano', 'vegano', 'sin fructosa', 'sin azucar', 'sin huevo']
 
+	abrircerrar(){
+		this.abierto=this.abierto?false: true;
+	}
 
 	onCheckboxChange(categoria, event) {
 		 if(event.target.checked) {

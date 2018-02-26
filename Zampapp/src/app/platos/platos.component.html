@@ -1,26 +1,28 @@
-
-
-<div class="divTableCell" >
+<div class="divTableCell">
+<div class="flipa">
 	<div class="flipper" appHover>
-		<div class="front"> 
-			<h3>{{plato.nombre}}</h3> 
-			<img src="{{plato.foto}}">  
-			<div class="precio">  
-				<p>{{plato.precio | currency:'EUR':true}}</p> 
-			</div> 
-		</div> 
-		<div class="back"> 
+		<div class="front">
+			<h3>{{plato.nombre}}</h3>
+			<img src="{{plato.foto}}">
+			<div class="precio">
+				<p>{{plato.precio | currency:'EUR':true}}</p>
+			</div>
+		</div>
+		<div class="back">
 			<a href="" routerLink="/detail/{{ plato.id }}">
-				<h5>Descripción</h5> 
-				<p>{{plato.descripcion}}</p>  
-				<h5>Restaurante</h5>  
-				<p>{{plato.restaurante}}</p>  
-				<div class="precio"> 
-					<p>{{plato.precio | currency:'EUR'}}</p>
+				<h5>Descripción</h5>
+				<p>{{plato.descripcion}}</p>
+				<h5>Restaurante</h5>
+				<p>{{plato.restaurante}}</p>
+				<div class="precio">
+					<p>{{plato.precio}}€</p>
 				</div>
 			</a>
 		</div>
-	</div>  
-	<input type="number" size="3" name="num" min="1" max="100" value="0"/>
+	</div>
+</div>
+<div class="alacesta">
+	<input type="number" size="3" name="num" min="1" max="100" value="0" />
 	<button class="añadir"></button>
+</div>
 </div>

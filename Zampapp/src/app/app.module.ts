@@ -17,13 +17,8 @@ import { HttpModule } from '@angular/http';
 import { HoverDirective } from './hover.directive';
 import { HomeIzquierdaComponent } from './home-izquierda/home-izquierda.component';
 import { HomeDerechaComponent } from './home-derecha/home-derecha.component';
-<<<<<<< HEAD
 import { CestaComponent } from './cesta/cesta.component';
-
-
-=======
 import { HttpClientModule } from '@angular/common/http';
->>>>>>> 567751caa4f9f3f53476be185c441d7d45e6fe8e
 
 @NgModule({
   declarations: [

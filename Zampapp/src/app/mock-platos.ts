@@ -630,7 +630,6 @@ export const PLATOS: Plato[] = [
 			'pepinillos',
 			'espinacas',
 			'aceitunas negras',
-			'pan vegano',
 			'lechuga trocadero',
 			'ajonesa',
 			'hummus'

@@ -4,7 +4,7 @@
     <div class="sizquierda">
       <h3>{{ plato.nombre }}</h3>
       <img [src]="plato.foto" [alt]="plato.nombre" class="img-principal">
-      <h5>Puntuación:4/5</h5>
+      <h5>Valoración:{{plato.valoracion}}</h5>
     </div>
     <div class="sderecha">
       <div class="caracteristicas">
@@ -17,7 +17,7 @@
       </div>
       <div class="caracteristicas">
         <h5>Precio: </h5>
-        <p>{{plato.precio}}</p>
+        <p>{{plato.precio}}€</p>
       </div>
       <div class="caracteristicas">
         <h5>Ingredientes: </h5>

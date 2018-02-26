@@ -8,8 +8,8 @@ export class Plato {
     cantidad: string; 
     pic: string;
     temp: string; 
-    alergia: string[];
-    preferencia: string;
-    foto: string
+    preferencia: string[];
+    foto: string; 
+    valoracion: string;
   };
   

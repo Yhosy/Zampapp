@@ -20,11 +20,6 @@
                 <h1>
                     ¡Sé lo que quiero!
                 </h1>
-                <div>
-                    <label for="">Filtrar</label>
-                    <input #searchBox type="text" id="search-box" value='' (keyup)="Escribir(searchBox.value)" />
-                    <br/>
-                </div>
                 <div class="subderecha">
                     <div class="pretable" *ngFor="let categoria of filtrado">
                         <div>

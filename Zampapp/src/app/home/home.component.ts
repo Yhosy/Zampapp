@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChildren, ElementRef } from '@angular/core';
-import { Categorias } from '../categorias';
+import { Categorias } from '../Categorias';
 import { BusquedaService } from '../busqueda.service'
 import { QueryList } from '@angular/core';
 import { Busqueda } from '../busqueda';

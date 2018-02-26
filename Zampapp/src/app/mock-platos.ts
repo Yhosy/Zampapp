@@ -7,41 +7,39 @@ export const PLATOS: Plato[] = [
 		precio: 11.60,
 		restaurante: 'Tagliatella',
 		ingredientes: [
-			'queso',
 			'tomate',
 			'mozzarella',
 			'salami',
 			'salami picante'
 		],
-		descripcion: 'Tomate, Mozzarella, Salami Picante',
+		descripcion: 'Prueba la nueva Telepizza del mes Pepe Peperoni: doble ración de pepperoni y topping a base de mozzarella. ¿Podrás resistirte?',
 		categoria: 'pizzas',
 		cantidad: 'para una persona',
 		pic: 'picante',
 		temp: 'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://res.cloudinary.com/hesvvq3zo/image/upload/w_1000,h_500,c_pad,q_30/v1477472361/takeaway/Le-Pizze-Pepperoni.jpg'
+		preferencia: ['sin huevo', 'sin frutos secos', 'sin azucar'],
+		foto: 'https://res.cloudinary.com/hesvvq3zo/image/upload/w_1000,h_500,c_pad,q_30/v1477472361/takeaway/Le-Pizze-Pepperoni.jpg',
+		valoracion: '5/5'
 	},
 	{
 		nombre: 'Pizza 4 quesos',
 		precio: 12.60,
 		restaurante: 'Tagliatella',
 		ingredientes: [
-			'queso',
 			'tomate',
 			'grana padano',
 			'mozzarella',
 			'gorgonzola',
 			'emmental'
 		],
-		descripcion: 'Tomate, Grana Padano, Mozzarella, Gorgonzola, Emmental.',
+		descripcion: 'Siente en tu paladar una fusión de sabores con nuestros mejores quesos y todo esto aderezado con tomate, simplemente espectacular.',
 		categoria: 'pizzas',
 		cantidad: 'para una persona',
 		pic: 'nada picante',
 		temp: 'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://res.cloudinary.com/hesvvq3zo/image/upload/w_1000,h_500,c_pad,q_30/v1477472361/takeaway/Le-Pizze-4formaggi.jpg'
+		preferencia: ['sin huevo', 'sin frutos secos', 'sin azucar', 'vegetariano'],
+		foto: 'https://res.cloudinary.com/hesvvq3zo/image/upload/w_1000,h_500,c_pad,q_30/v1477472361/takeaway/Le-Pizze-4formaggi.jpg',
+		valoracion: '4/5'
 	},
 	{
 		nombre: 'Pizza Carbonara',
@@ -49,31 +47,27 @@ export const PLATOS: Plato[] = [
 		restaurante: 'TelePizza',
 		ingredientes: [
 			'bacon',
-			'queso',
-			'crema',
 			'champiñon',
-			'carbonara',
 			'salsa carbonara',
 			'mozzarella'
 		],
-		descripcion: 'Masa fresca, doble de bacon, champiñón, salsa carbonara, topping a base de mozzarella y extra detopping a base de mozzarella.',
+		descripcion: 'El inconfundible sabor de nuestra salsa carbonara con doble de bacon, champiñón y un extra de topping a base de mozzarella que la convierte en una elección segura.',
 		categoria: 'pizzas',
 		cantidad: 'para una persona',
 		pic: 'nada picante',
 		temp: 'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://images.telepizza.com/vol/es/images/content/productos/pcaq_c.png'
+		preferencia: ['sin frutos secos', 'sin azucar'],
+		foto: 'https://images.telepizza.com/vol/es/images/content/productos/pcaq_c.png',
+		valoracion: '4/5'
 	},
 	{
 		nombre: 'Pizza Boloñesa',
 		precio: 7,
 		restaurante: 'TelePizza',
 		ingredientes: [
-			'vacuno',
+			'carne de vacuno',
 			'mozzarella',
 			'tomate confitado',
-			'tomate',
 			'queso'
 		],
 		descripcion: 'Doble ración de carne de vacuno, topping a base de mozzarella y extra de salsa de tomate confitado.',
@@ -81,9 +75,9 @@ export const PLATOS: Plato[] = [
 		cantidad: 'para una persona',
 		pic: 'nada picante',
 		temp: 'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://images.telepizza.com/vol/es/images/content/productos/bolo_c.png'
+		preferencia: ['sin huevo', 'sin frutos secos'],
+		foto: 'https://images.telepizza.com/vol/es/images/content/productos/bolo_c.png',
+		valoracion: '4/5'
 	},
 	{
 		nombre: 'Pizza Hawaiana',
@@ -91,21 +85,19 @@ export const PLATOS: Plato[] = [
 		restaurante: 'TelePizza',
 		ingredientes: [
 			'masa fresca',
-			'york',
 			'jamón york',
 			'piña',
 			'mozzarella',
-			'tomate',
-			'queso'
+			'tomate'
 		],
-		descripcion: 'Masa fresca, doble de york, piña, topping a base de mozzarella, tomate y extra de topping a base de mozzarella.',
+		descripcion: 'Prueba nuestra Telepizza con la receta más tropical, piña, doble de york y extra de topping a base de mozzarella y déjate seducir por los sabores más exóticos, ¡aloha!',
 		categoria: 'pizzas',
 		cantidad: 'para compartir',
 		pic: 'nada picante',
 		temp: 'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://images.telepizza.com/vol/es/images/content/productos/phw_c.png'
+		preferencia: ['sin huevo', 'sin frutos secos', 'sin azucar'],
+		foto: 'https://images.telepizza.com/vol/es/images/content/productos/phw_c.png',
+		valoracion: '3/5'
 	},
 	{
 		nombre: 'Pizza Carbonara Cebolla',
@@ -117,40 +109,36 @@ export const PLATOS: Plato[] = [
 			'champiñon',
 			'salsa carbonara',
 			'mozzarella',
-			'cebolla',
-			'crema',
-			'carbonara',
-			'queso'
+			'cebolla'
 		],
-		descripcion: 'Masa fresca, doble de bacon, champiñón, salsa carbonara, topping a base de mozzarella y cebolla',
+		descripcion: 'Combina tu salsa carbonara favorita con cebolla, doble de bacon y champiñón. Una mezcla que te encantará.',
 		categoria: 'pizzas',
 		cantidad: 'para compartir',
-		pic:'nada picante',
-		temp:'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://images.telepizza.com/vol/es/images/content/productos/pcar_c.png'
+		pic: 'nada picante',
+		temp: 'caliente',
+		preferencia: ['sin frutos secos', 'sin azucar'],
+		foto: 'https://images.telepizza.com/vol/es/images/content/productos/pcar_c.png',
+		valoracion: '4/5'
 	},
 	{
 		nombre: 'Pizza Rodeo',
 		precio: 7,
 		restaurante: 'TelePizza',
 		ingredientes: [
-			'vacuno',
+			'carne de vacuno',
 			'bacon',
 			'salsa steak',
 			'salsa grill',
-			'mozzarella',
-			'queso'
+			'mozzarella'
 		],
-		descripcion: 'La nueva Telepizza Rodeo compuesta por: carne de vacuno, bacon, salsa steak&grill y topping a base de mozzarella',
+		descripcion: 'La nueva Telepizza Rodeo compuesta por: carne de vacuno, bacon, salsa steak&grill y topping a base de mozzarella. No dejes pasar esta oportunidad y ¡Disfruta!',
 		categoria: 'pizzas',
 		cantidad: 'para compartir',
-		pic:'nada picante',
-		temp:'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://images.telepizza.com/vol/es/images/content/productos/rode_c.png'
+		pic: 'nada picante',
+		temp: 'caliente',
+		preferencia: ['sin frutos secos', 'sin azucar','sin huevo'],
+		foto: 'https://images.telepizza.com/vol/es/images/content/productos/rode_c.png',
+		valoracion: '4/5'
 	},
 	{
 		nombre: 'Pizza Ibérica de TelePizza',
@@ -160,20 +148,16 @@ export const PLATOS: Plato[] = [
 			'jamón ibérico de cebo',
 			'tomate natural',
 			'aceite de oliva',
-			'masa fresca',
-			'jamón',
-			'tomate',
-			'aceite',
-			'queso'
+			'masa fresca'
 		],
 		descripcion: 'Una exquisita selección de jamón ibérico de cebo acompañado de finas rodajas de tomate natural y un toque de aceite de oliva sobre una crujiente masa',
 		categoria: 'pizzas',
 		cantidad: 'para compartir',
-		pic:'nada picante',
-		temp:'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://images.telepizza.com/vol/es/images/content/productos/iber_c.png'
+		pic: 'nada picante',
+		temp: 'caliente',
+		preferencia: ['sin frutos secos', 'sin azucar','sin huevo'],
+		foto: 'https://images.telepizza.com/vol/es/images/content/productos/iber_c.png',
+		valoracion: '5/5'
 	},
 	{
 		nombre: 'Pizza Burger',
@@ -181,25 +165,21 @@ export const PLATOS: Plato[] = [
 		restaurante: 'TelePizza',
 		ingredientes: [
 			'queso cheddar',
-			'cheddar',
-			'vacuno',
+			'carne de vacuno',
 			'tomate natural',
-			'tomate',
 			'pepinillos',
 			'mozzarella',
 			'bacon cripsy',
-			'bacon',
-			'salsa burger',
-			'queso'
+			'salsa burger'
 		],
 		descripcion: 'Auténtico sabor burger en cada bocado. Queso cheddar, carne de vacuno, tomate natural y pepinillos, cubiertos con una masa con topping a base de mozzarella, bacon crispy y salsa burger.',
 		categoria: 'pizzas',
 		cantidad: 'para compartir',
-		pic:'nada picante',
-		temp:'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://images.telepizza.com/vol/es/images/content/productos/p3pb_c.png'
+		pic: 'nada picante',
+		temp: 'caliente',
+		preferencia: ['sin frutos secos', 'sin azucar','sin huevo'],
+		foto: 'https://images.telepizza.com/vol/es/images/content/productos/p3pb_c.png',
+		valoracion: '3/5'
 	},
 	{
 		nombre: 'Pizza Barbacoa Gourmet',
@@ -208,24 +188,19 @@ export const PLATOS: Plato[] = [
 		ingredientes: [
 			'5 quesos',
 			'pollo marinado',
-			'pollo',
 			'bacon ahumado',
-			'bacon',
 			'carne de vacuno',
-			'vacuno',
 			'salsa barbacoa',
-			'barbacoa',
-			'mozzarella',
-			'queso'
+			'mozzarella'
 		],
-		descripcion: 'Una mezcla de 5 quesos, tiras de pollo marinado, bacon ahumado, doble ración de carne de vacuno, salsa barbacoa y topping a base de mozzarella.',
+		descripcion: 'La mejor barbacoa de nuestra historia. Una mezcla de 5 quesos, tiras de pollo marinado, bacon ahumado, doble ración de carne de vacuno, salsa barbacoa y topping a base de mozzarella.',
 		categoria: 'pizzas',
 		cantidad: 'para compartir',
-		pic:'nada picante',
-		temp:'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://images.telepizza.com/vol/es/images/content/productos/53bq_c.png'
+		pic: 'nada picante',
+		temp: 'caliente',
+		preferencia: ['sin frutos secos', 'sin azucar','sin huevo'],
+		foto: 'https://images.telepizza.com/vol/es/images/content/productos/53bq_c.png',
+		valoracion: '5/5'
 	},
 	{
 		nombre: 'Pizza Carbonara Gourmet Queso',
@@ -233,23 +208,20 @@ export const PLATOS: Plato[] = [
 		restaurante: 'TelePizza',
 		ingredientes: [
 			'5 quesos',
-			'gourmet',
 			'masa fina',
 			'bacon',
 			'champiñón',
 			'salsa carbonara',
-			'carbonara',
-			'mozzarella',
-			'queso'			
+			'mozzarella'
 		],
-		descripcion: 'Una pizza mediana mezcla de 5 quesos cubierta de una masa fina con doble ración de bacon, champiñón, salsa carbonara y extra de topping a base de mozzarella',
+		descripcion: 'La mejor carbonara de nuestra historia. Una pizza mediana mezcla de 5 quesos cubierta de una masa fina con doble ración de bacon, champiñón, salsa carbonara y extra de topping a base de mozzarella',
 		categoria: 'pizzas',
 		cantidad: 'para compartir',
-		pic:'nada picante',
-		temp:'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://images.telepizza.com/vol/es/images/content/productos/tkgq_c.png'
+		pic: 'nada picante',
+		temp: 'caliente',
+		preferencia: ['sin frutos secos', 'sin azucar','sin huevo'],
+		foto: 'https://images.telepizza.com/vol/es/images/content/productos/tkgq_c.png',
+		valoracion: '5/5'
 	},
 	{
 		nombre: 'Pizza Carbonara Gourmet Cebolla',
@@ -261,18 +233,16 @@ export const PLATOS: Plato[] = [
 			'bacon',
 			'champiñón',
 			'salsa carbonara',
-			'carbonara',
-			'cebolla',
-			'queso'
+			'cebolla'
 		],
-		descripcion: 'Una pizza mediana mezcla de 5 quesos cubierta de una masa fina con doble ración de bacon, champiñón, salsa carbonara y cebolla.',
+		descripcion: 'La mejor carbonara de nuestra historia. Una pizza mediana mezcla de 5 quesos cubierta de una masa fina con doble ración de bacon, champiñón, salsa carbonara y cebolla.',
 		categoria: 'pizzas',
 		cantidad: 'para compartir',
-		pic:'nada picante',
-		temp:'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://images.telepizza.com/vol/es/images/content/productos/tkgo_c.png'
+		pic: 'nada picante',
+		temp: 'caliente',
+		preferencia: ['sin frutos secos', 'sin azucar','sin huevo'],
+		foto: 'https://images.telepizza.com/vol/es/images/content/productos/tkgo_c.png',
+		valoracion: '5/5'
 	},
 	{
 		nombre: 'Pizza Telepizza Vulcano Nachos',
@@ -284,18 +254,16 @@ export const PLATOS: Plato[] = [
 			'bacon',
 			'champiñón',
 			'salsa carbonara',
-			'carbonara',
-			'cebolla',
-			'queso'
+			'cebolla'
 		],
-		descripcion: 'Una pizza mediana mezcla de 5 quesos cubierta de una masa fina con doble ración de bacon, champiñón, salsa carbonara y cebolla.',
+		descripcion: 'Empieza dipeando los nachos paprika en la deliciosa fuente de queso cheddar y termina con un sabroso bocado de pizza con los ingredientes que más te gusten.',
 		categoria: 'pizzas',
 		cantidad: 'para compartir',
-		pic:'nada picante',
-		temp:'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://images.telepizza.com/vol/es/images/content/productos/tkgo_c.png'
+		pic: 'nada picante',
+		temp: 'caliente',
+		preferencia: ['sin frutos secos', 'sin azucar','sin huevo'],
+		foto: 'https://images.telepizza.com/vol/es/images/content/productos/tkgo_c.png',
+		valoracion: '2/5'
 	},
 	{
 		nombre: 'Pizza Bacon Cheeseburger',
@@ -305,23 +273,19 @@ export const PLATOS: Plato[] = [
 			'masa fresca',
 			'bacon',
 			'mini hamburguesas',
-			'hamburguesa',
 			'queso cheddar',
-			'cheddar',
 			'mozzarella',
 			'salsa burger',
 			'tomate natural',
-			'tomate',
-			'queso'
 		],
-		descripcion: 'Masa fresca, bacon, mini hamburguesitas, queso cheddar, topping a base de mozzarella, salsa burger y tomate natural.',
+		descripcion: 'Si habéis soñado con una mezcla perfecta entre Telepizza y hamburguesa aquí la tenéis: salsa burger, topping a base de mozzarella, tomate natural, bacon, queso cheddar coronada con deliciosas mini hamburguesas.',
 		categoria: 'pizzas',
 		cantidad: 'para compartir',
-		pic:'nada picante',
-		temp:'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://images.telepizza.com/vol/es/images/content/productos/pzbc_c.png'
+		pic: 'nada picante',
+		temp: 'caliente',
+		preferencia: ['sin frutos secos', 'sin azucar','sin huevo'],
+		foto: 'https://images.telepizza.com/vol/es/images/content/productos/pzbc_c.png',
+		valoracion: '3/5'
 	},
 	{
 		nombre: 'Pizza Barbacoa Crème Queso',
@@ -334,19 +298,16 @@ export const PLATOS: Plato[] = [
 			'pollo',
 			'mozzarella',
 			'salsa barbacoa',
-			'salsa carbonara',
-			'carbonara',
-			'barbacoa',
-			'queso'
+			'salsa carbonara'
 		],
-		descripcion: 'Masa fresca, bacon, champiñón, pollo, topping a base de mozzarella, mezcla de salsa barbacoa y carbonara y extra de topping a base de mozzarella.',
+		descripcion: 'Cuando unes dos de nuestras mejores salsas el resultado es excepcional, barbacoa y carbonara acompañadas de pollo, bacon, champiñón y un extra de topping a base de mozzarella para un sabor sorprendente.',
 		categoria: 'pizzas',
 		cantidad: 'para compartir',
-		pic:'nada picante',
-		temp:'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://images.telepizza.com/vol/es/images/content/productos/pbcq_c.png'
+		pic: 'nada picante',
+		temp: 'caliente',
+		preferencia: ['sin frutos secos', 'sin azucar'],
+		foto: 'https://images.telepizza.com/vol/es/images/content/productos/pbcq_c.png',
+		valoracion: '3/5'
 	},
 	{
 		nombre: 'Pizza Jalisco',
@@ -355,20 +316,18 @@ export const PLATOS: Plato[] = [
 		ingredientes: [
 			'masa fresca',
 			'aceitunas negras',
-			'aceitunas',
 			'cebolla',
 			'pimiento morrón',
-			'vacuno',
-			'queso'
+			'carne de vacuno'
 		],
-		descripcion: 'Masa fresca, Aceitunas negras, Cebolla, Pimiento morrón, carne de vacuno',
+		descripcion: 'Nuestra telepizza con receta mejicana, salsa jalisco, carne de vacuno, cebolla, pimiento morrón, aceitunas negras.¡Pruébala manito!',
 		categoria: 'pizzas',
 		cantidad: 'para compartir',
-		pic:'nada picante',
-		temp:'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://images.telepizza.com/vol/es/images/content/productos/jali_c.png'
+		pic: 'picante',
+		temp: 'caliente',
+		preferencia: ['sin frutos secos', 'sin azucar','sin huevo'],
+		foto: 'https://images.telepizza.com/vol/es/images/content/productos/jali_c.png',
+		valoracion: '4/5'
 	},
 	{
 		nombre: 'Chicken McRoll',
@@ -376,23 +335,18 @@ export const PLATOS: Plato[] = [
 		restaurante: 'McDonals',
 		ingredientes: [
 			'tortilla',
-			'tortita',
-			'pollo',
 			'tomate',
-			'wrap',
-			'burrito',
 			'mayonesa',
-			'pollo rebozado',
-			'pollo frito'	
+			'pollo crujiente'
 		],
 		descripcion: 'Disfruta de nuestro inconfundible pollo crujiente acompañado de tomate, lechuga y mayonesa. ¡Bien envuelto en una rica tortilla para que no se te escape!',
 		categoria: 'rolls',
 		cantidad: 'para una persona',
-		pic:'nada picante',
-		temp:'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://www.mcdonalds.es/sites/default/files/produits/477x360_mcwrap_0.png'
+		pic: 'nada picante',
+		temp: 'caliente',
+		preferencia: ['sin frutos secos', 'sin azucar','sin huevo'],
+		foto: 'https://www.mcdonalds.es/sites/default/files/produits/477x360_mcwrap_0.png',
+		valoracion: '5/5'
 	},
 	{
 		nombre: 'Miso Ramen',
@@ -400,28 +354,23 @@ export const PLATOS: Plato[] = [
 		restaurante: 'Udon',
 		ingredientes: [
 			'fideos',
-			'caldo',
+			'miso',
 			'caldo de pollo',
 			'soja',
-			'miso',
 			'cerdo',
 			'algas wakame',
-			'alga',
-			'wakame',
-			'nori',
 			'huevo',
 			'alga nori',
 			'cebolleta tierna',
-			'cebolleta'
 		],
 		descripcion: 'Fideos Ramen con caldo de pollo elaborado con soja y miso. Con láminas de cerdo marinado (chashu), algas wakame, huevo de corral semicocido y marinado, alga nori y cebolleta tierna',
 		categoria: 'sopas',
 		cantidad: 'para una persona',
-		pic:'agridulce',
-		temp:'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'http://www.udon.es/products/images/Miso_Soup_G_1.jpg'
+		pic: 'agridulce',
+		temp: 'caliente',
+		preferencia: ['sin frutos secos', 'sin azucar'],
+		foto: 'http://www.udon.es/products/images/Miso_Soup_G_1.jpg',
+		valoracion: '4/5'
 	},
 	{
 		nombre: 'Tempura Soba',
@@ -430,22 +379,18 @@ export const PLATOS: Plato[] = [
 		ingredientes: [
 			'caldo',
 			'soba',
-			'tempura',
-			'verdura',
-			'langostino',
 			'tempura de verduras',
 			'tempura de langostino',
-			'alga',
 			'alga nori'
 		],
 		descripcion: 'Soba con una deliciosa y crujiente tempura de verduras ecológicas y langostino con alga nori',
 		categoria: 'tempuras',
 		cantidad: 'para una persona',
-		pic:'agridulce',
-		temp:'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'http://www.udon.es/products/images/Tempura_soba_G896.jpg'
+		pic: 'agridulce',
+		temp: 'caliente',
+		preferencia: ['sin frutos secos', 'sin azucar','sin huevo'],
+		foto: 'http://www.udon.es/products/images/Tempura_soba_G896.jpg',
+		valoracion: '5/5'
 	},
 	{
 		nombre: 'Oyako Don',
@@ -454,26 +399,21 @@ export const PLATOS: Plato[] = [
 		ingredientes: [
 			'arroz',
 			'pollo rebozado',
-			'pollo',
 			'cebolla',
 			'setas shiitake',
-			'setas',
-			'shiitake',
 			'dashi',
 			'huevo revuelto',
-			'huevo',
 			'salsa tonkatsu',
-			'tonkatsu',
 			'cebollino'
 		],
 		descripcion: 'Arroz con tiras de contramuslo de pollo rebozadas, cebolla, setas shiitake, dashi, huevo revuelto, salsa tonkatsu y cebollino',
 		categoria: 'arroces',
 		cantidad: 'para una persona',
-		pic:'agridulce',
-		temp:'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'http://udon.es/products/images/Oyako_Don_G.jpg'
+		pic: 'agridulce',
+		temp: 'caliente',
+		preferencia: ['sin frutos secos', 'sin azucar'],
+		foto: 'http://udon.es/products/images/Oyako_Don_G.jpg',
+		valoracion: '4/5'
 	},
 	{
 		nombre: 'Yakimeshi Don',
@@ -482,29 +422,23 @@ export const PLATOS: Plato[] = [
 		ingredientes: [
 			'arroz',
 			'secreto de Cerdo',
-			'cerdo',
-			'setas',
-			'soja',
 			'maíz',
 			'cebolleta',
 			'zanahoria',
 			'setas shiitake',
-			'shiitake',
-			'setas',
 			'calabacín',
 			'brotes de soja',
 			'maíz dulce',
-			'salsa de soja'
-			
+			'salsa de soja Kikkoman'
 		],
 		descripcion: 'Arroz salteado con secreto de cerdo de granja, cebolleta, zanahoria, setas shiitake, calabacín, brotes de soja y maíz dulce. Con salsa de soja Kikkoman',
 		categoria: 'arroces',
 		cantidad: 'para una persona',
-		pic:'agridulce',
-		temp:'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'http://www.udon.es/products/images/Yakimeshi_Don_G.jpg'
+		pic: 'agridulce',
+		temp: 'caliente',
+		preferencia: ['sin frutos secos', 'sin azucar', 'sin huevo'],
+		foto: 'http://www.udon.es/products/images/Yakimeshi_Don_G.jpg',
+		valoracion: '5/5'
 	},
 	{
 		nombre: 'Kaesar Asian Salad',
@@ -513,15 +447,8 @@ export const PLATOS: Plato[] = [
 		ingredientes: [
 			'aguacate',
 			'tomate cherry',
-			'tomate',
-			'carne',
-			'pollo',
-			'pechuga',
-			'maíz',
-			'queso',
-			'pechuga de pollo',
+			'pechuga de pollo rebozado con maiz tostado',
 			'salsa césar',
-			'maiz tostado',
 			'dashi',
 			'chips de maiz',
 			'cacahuete',
@@ -530,62 +457,52 @@ export const PLATOS: Plato[] = [
 		descripcion: 'Ensalada verde con aguacate, tomate cherry, dados de pechuga de pollo de corral rebozado con maíz tostado, salsa césar con dashi, chips crujientes de maíz, cacahuetes y parmesano rallado',
 		categoria: 'ensaladas',
 		cantidad: 'para una persona',
-		pic:'nada picante',
-		temp:'frío',
-		alergia:[],
-		preferencia: '',
-		foto: 'http://www.udon.es/products/images/CAESARSALADG.jpg'
+		pic: 'nada picante',
+		temp: 'frío',
+		preferencia: ['sin frutos secos', 'sin azucar', 'sin huevo'],
+		foto: 'http://www.udon.es/products/images/CAESARSALADG.jpg',
+		valoracion: '4/5'
 	},
 	{
 		nombre: 'Big Mac',
 		precio: 4.20,
 		restaurante: 'McDonals',
 		ingredientes: [
-			'vacuno',
+			'carne de vacuno',
 			'lechuga',
 			'cebolla',
 			'pepinillo',
-			'queso',
 			'queso cheddar',
-			'cheddar',
-			'salsa',
-			'pan de sésamo',
-			'pan',
-			'sésamo'
+			'pan de sésamo'
 		],
 		descripcion: 'Dos jugosas hamburguesas de carne 100% vacuno español, lechuga fresca y crujiente, cebolla, pepinillo, queso Cheddar fundido y nuestra inimitable salsa secreta. Todo esto envuelto en un nuevo pan de sésamo horneado al estilo tradicional.',
 		categoria: 'hamburguesas',
 		cantidad: 'para una persona',
-		pic:'nada picante',
-		temp:'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://www.mcdonalds.es/sites/default/files/produits/477x360_bm.png'
+		pic: 'nada picante',
+		temp: 'caliente',
+		preferencia: ['sin azucar', 'sin huevo'],
+		foto: 'https://www.mcdonalds.es/sites/default/files/produits/477x360_bm.png',
+		valoracion: '4/5'
 	},
 	{
 		nombre: 'Grand McExtreme™ Chiken Crispy Cheese',
 		precio: 5.50,
 		restaurante: 'McDonals',
 		ingredientes: [
-			'pollo',
-			'pollo rebozado',
-			'pollo frito',
-			'crispy',
-			'cebolla',
-			'queso',
+			'pollo crujiente',
+			'cebolla crispy',
 			'queso gouda',
-			'gouda',
 			'lechuga',
 			'salsa de queso'
 		],
 		descripcion: 'Delicioso pollo crujiente 100% origen español, cebolla crispy y asada, queso Gouda, lechuga Batavia y una irresistible salsa cremosa de queso. ¿Se te ha hecho ya la boca agua?',
 		categoria: 'hamburguesas',
 		cantidad: 'para una persona',
-		pic:'nada picante',
-		temp:'caliente',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://www.mcdonalds.es/sites/default/files/produits/477x360_chickenbells.png'
+		pic: 'nada picante',
+		temp: 'caliente',
+		preferencia:['sin huevo', 'sin lactosa'],
+		foto: 'https://www.mcdonalds.es/sites/default/files/produits/477x360_chickenbells.png',
+		valoracion: '5/5'
 	},
 	{
 		nombre: 'Mediterranean Tuna',
@@ -593,8 +510,6 @@ export const PLATOS: Plato[] = [
 		restaurante: 'McDonals',
 		ingredientes: [
 			'atún',
-			'pescado',
-			'pimientos',
 			'pimiento rojo',
 			'pimiento amarillo',
 			'lechuga',
@@ -604,11 +519,11 @@ export const PLATOS: Plato[] = [
 		descripcion: '¡Nuestra base más fresca acompañado de nuestros productos más frescos! Disfruta de esta deliciosa ensalada de atún con la mejor variedad de pimientos y crujientes croutons.',
 		categoria: 'ensaladas',
 		cantidad: 'para una persona',
-		pic:'nada picante',
-		temp:'frío',
-		alergia:[],
-		preferencia: '',
-		foto: 'https://www.mcdonalds.es/sites/default/files/produits/mediterraneantuna477.png'
+		pic: 'nada picante',
+		temp: 'frío',
+		preferencia: ['sin huevo', 'sin lactosa', 'sin frutos secos'],
+		foto: 'https://www.mcdonalds.es/sites/default/files/produits/mediterraneantuna477.png',
+		valoracion: '3/5'
 	},
 	{
 		nombre: 'Wowburger',
@@ -619,7 +534,6 @@ export const PLATOS: Plato[] = [
 			'mostaza',
 			'pepinillos',
 			'cebolla caramelizada',
-			'cebolla',
 			'espinacas',
 			'lechuga',
 			'jalapeños',
@@ -628,65 +542,56 @@ export const PLATOS: Plato[] = [
 		descripcion: 'Vegan burger ecológica de remolacha, pepinillos, cebolla caramelizada, espinaca baby, lechuga trocadero, y jalapeños.',
 		categoria: 'hamburguesas',
 		cantidad: 'para una persona',
-		pic:'picante',
-		temp:'caliente',
-		alergia:['sin lactosa', 'sin huevo'],
-		preferencia: 'vegano',
-		foto: 'http://www.latrocadero.com/wp-content/uploads/2017/10/wowburger-300x294.png'
+		pic: 'picante',
+		temp: 'caliente',
+		preferencia:['vegano', 'sin huevo', 'vegetariano', 'sin lactosa', 'sin frutos secos'],
+		foto: 'http://www.latrocadero.com/wp-content/uploads/2017/10/wowburger-300x294.png',
+		valoracion: '4/5'
 	},
 	{
 		nombre: 'Setburg',
 		precio: 5.95,
 		restaurante: 'La trocadero',
 		ingredientes: [
-			'setas',
+			'hamburguesa de setas',
 			'rúcula',
 			'tomate concentrado',
-			'tomate',
 			'cebolla roja',
-			'cebolla',
 			'queso vegano',
-			'queso',
 			'salsa pesto vegana',
 			'pesto',
-			'pan vegano',
-			'contundente'
+			'pan vegano'
 		],
 		descripcion: 'Vegan burger ecológica de setas, rúcula, tomate concentrado, cebolla roja, queso vegano, y salsa pesto vegana.',
 		categoria: 'hamburguesas',
 		cantidad: 'para una persona',
-		pic:'nada picante',
-		temp:'caliente',
-		alergia:['sin lactosa',
-			'sin huevo'],
-		preferencia: 'vegano',
-		foto: 'http://www.latrocadero.com/wp-content/uploads/2017/10/setburg-300x288.png'
+		pic: 'nada picante',
+		temp: 'caliente',
+		preferencia: ['vegano', 'sin huevo', 'vegetariano', 'sin lactosa'],
+		foto: 'http://www.latrocadero.com/wp-content/uploads/2017/10/setburg-300x288.png',
+		valoracion: '3/5'
 	},
 	{
 		nombre: 'Setbacon',
 		precio: 5.95,
 		restaurante: 'La trocadero',
 		ingredientes: [
-			'setas',
+			'hamburguesa de setas',
 			'bacon vegano',
 			'cebolla caramelizada',
 			'lechuga trocadero',
 			'tomate fresco',
-			'tomate',
-			'lechuga',
-			'curry',
 			'salsa curry',
-			'pan vegano',
-			'cebolla'
+			'pan vegano'
 		],
 		descripcion: 'Vegan burger ecológica de setas, vegan bacon, cebolla caramelizada, lechuga trocadero, tomate fresco, y salsa curry.',
 		categoria: 'hamburguesas',
 		cantidad: 'para una persona',
-		pic:'picante',
-		temp:'caliente',
-		alergia:[],
-		preferencia: 'vegano',
-		foto: 'http://www.latrocadero.com/wp-content/uploads/2017/10/setbacon-300x257.png'
+		pic: 'picante',
+		temp: 'caliente',
+		preferencia:['vegano', 'sin huevo', 'vegetariano', 'sin lactosa', 'sin frutos secos'],
+		foto: 'http://www.latrocadero.com/wp-content/uploads/2017/10/setbacon-300x257.png',
+		valoracion: '5/5'
 	},
 	{
 		nombre: 'LTClaccic',
@@ -708,24 +613,18 @@ export const PLATOS: Plato[] = [
 		descripcion: 'Vegan burger ecológica de setas, vegan bacon, cebolla caramelizada, lechuga trocadero, tomate fresco, y salsa curry.',
 		categoria: 'hamburguesas',
 		cantidad: 'para una persona',
-		pic:'nada picante',
-		temp:'caliente',
-		alergia:[],
-		preferencia: 'vegano',
-		foto: 'http://www.latrocadero.com/wp-content/uploads/2017/10/Ltclasic-300x288.png'
+		pic: 'nada picante',
+		temp: 'caliente',
+		preferencia: ['vegano', 'sin huevo', 'vegetariano', 'sin lactosa', 'sin frutos secos'],
+		foto: 'http://www.latrocadero.com/wp-content/uploads/2017/10/Ltclasic-300x288.png',
+		valoracion: '4/5'
 	},
 	{
 		nombre: 'Falburger',
 		precio: 5.75,
 		restaurante: 'La trocadero',
 		ingredientes: [
-			'hamburguesa',
-			'vegetal',
-			'tomate',
-			'cebolla',
-			'vegano',
 			'falafel',
-			'aceitunas',
 			'tomate concentrado',
 			'cebolla roja',
 			'pepinillos',
@@ -739,11 +638,11 @@ export const PLATOS: Plato[] = [
 		descripcion: 'Vegan burger ecológica de falafel, tomate concentrado, cebolla roja, pepinillos, lechuga trocadero, espinaca baby, aceitunas negras, ajonesa y hummus.',
 		categoria: 'hamburguesas',
 		cantidad: 'para una persona',
-		pic:'nada picante',
-		temp:'caliente',
-		alergia:[],
-		preferencia: 'vegano',
-		foto: 'http://www.latrocadero.com/wp-content/uploads/2017/10/falburger-300x261.png'
+		pic: 'nada picante',
+		temp: 'caliente',
+		preferencia: ['vegano', 'sin huevo', 'vegetariano', 'sin lactosa', 'sin frutos secos'],
+		foto: 'http://www.latrocadero.com/wp-content/uploads/2017/10/falburger-300x261.png',
+		valoracion: '4/5'
 	},
 	{
 		nombre: 'Campburg',
@@ -754,7 +653,6 @@ export const PLATOS: Plato[] = [
 			'cebolla',
 			'pimiento rojo asado',
 			'pimiento rojo',
-			'pimiento',
 			'cebolla caramelizada',
 			'rúcula',
 			'pan vegano',
@@ -766,10 +664,75 @@ export const PLATOS: Plato[] = [
 		descripcion: 'Vegan burger ecológica de zanahoria y cebolla, pimiento rojo asado, cebolla caramelizada, rúcula, lechuga trocadero, queso vegano, veganesa, y mostaza.',
 		categoria: 'hamburguesas',
 		cantidad: 'para una persona',
-		pic:'nada picante',
-		temp:'caliente',
-		alergia:[],
-		preferencia: 'vegano',
-		foto: 'http://www.latrocadero.com/wp-content/uploads/2017/10/CAMPBURG-300x254.png'
+		pic: 'nada picante',
+		temp: 'caliente',
+		preferencia: ['vegano', 'sin huevo', 'vegetariano', 'sin lactosa', 'sin frutos secos'],
+		foto: 'http://www.latrocadero.com/wp-content/uploads/2017/10/CAMPBURG-300x254.png',
+		valoracion: '3/5'
+	},
+	{
+		nombre: 'Salmon avocado roll',
+		precio: 4.25,
+		restaurante: 'Udon',
+		ingredientes: [
+			'salmón', 
+			'aguacate', 
+			'tartar de mango', 
+			'salsa de mango', 
+			'salsa de sésamo', 
+			'brotes'
+		],
+		descripcion: 'Cuatro noodle rolls con salmón, aguacate, tartar de mango, salsa de sésamo y brotes',
+		categoria: 'sushi',
+		cantidad: 'para una persona',
+		pic: 'nada picante',
+		temp: 'frio',
+		preferencia: ['sin huevo', 'sin lactosa'],
+		foto: 'http://www.udon.es/products/images/Salmon_Avocado_Roll_G.jpg',
+		valoracion: '5/5'
+	}, 
+	{
+		nombre: 'Tatiyaki de salmón',
+		precio: 5.25,
+		restaurante: 'Udon',
+		ingredientes: [
+			'salmón marinado', 
+			'soja', 
+			'limón', 
+			'wasabi', 
+			'aceite de sésamo', 
+			'mirin',
+			'salsa teriyaki', 
+			'dados de aguacate con sésamo'
+		],
+		descripcion: 'Salmón marinado con soja, limón, wasabi, aceite de sésamo y mirin. Marcado a la plancha, fileteado y acompañado con salsa teriyaki y dados de aguacate con sésamo',
+		categoria: 'pescado',
+		cantidad: 'para una persona',
+		pic: 'picante',
+		temp: 'frio',
+		preferencia: ['sin huevo', 'sin lactosa'],
+		foto: 'http://www.udon.es/products/images/Tataki_Salmon_G3606.jpg',
+		valoracion: '4/5'
+	},
+	{
+		nombre: 'Tataki de ternera',
+		precio: 6.25,
+		restaurante: 'Udon',
+		ingredientes: [
+			'lomo de buey macerado',
+			'soja',
+			'mirin',
+			'aceite de sésamo',
+			'chips de espinacas', 
+			'salsa teriyaki'
+		],
+		descripcion: 'Lomo de buey macerado con soja, mirin y aceite de sésamo acompañado de chips de espinacas. Marcado a la plancha, fileteado y acompañado con salsa teriyaki',
+		categoria: 'carne',
+		cantidad: 'para una persona',
+		pic: 'nada picante',
+		temp: 'frio',
+		preferencia: ['sin huevo', 'sin lactosa'],
+		foto: 'http://www.udon.es/products/images/Tataki_Buey_G.jpg',
+		valoracion: '4/5'
 	}
 ]

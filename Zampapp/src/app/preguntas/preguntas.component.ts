@@ -3,22 +3,29 @@ import { BusquedaService } from '../busqueda.service';
 import { Busqueda } from '../busqueda';
 import { Router } from '@angular/router';
 
+import { NodeService } from '../node.service';
+
 @Component({
   selector: 'app-preguntas',
   templateUrl: './preguntas.component.html',
   styleUrls: ['./preguntas.component.css']
 })
 export class PreguntasComponent implements OnInit {
+  _platos: any;
   url: string;
   inputs = [];
   names = ["cantidad", "temperatura", "picante", "preferencia"];
   name: string;
   constructor(
     private busquedaService: BusquedaService,
-    private router: Router
+    private router: Router,
+    private _node: NodeService
   ) { }
 
   ngOnInit() {
+    this._node.getPlatos().subscribe(data => {
+      this._platos = data;
+    });
   }
   validaForm(arrInputs) {
     var contador = 0;

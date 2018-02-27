@@ -23,7 +23,7 @@
         <h5>Ingredientes: </h5>
         <div *ngFor="let ing of plato.ingredientes">
           <input type="checkbox" id="{{ing}}">
-          <label for="{{ing}}">{{ing}}</label>
+          <label for="{{ing}}">{{ing.charAt(0).toUpperCase() + ing.slice(1)}}</label>
         </div>
       </div>
       <label>Cantidad</label>

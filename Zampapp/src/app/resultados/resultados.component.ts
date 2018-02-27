@@ -5,6 +5,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import {FormsModule} from '@angular/forms';
 import  'rxjs/add/operator/map';
 import { BusquedaService } from '../busqueda.service'
+import { Busqueda } from '../busqueda';
 
 
 @Component({
@@ -13,14 +14,19 @@ import { BusquedaService } from '../busqueda.service'
   styleUrls: ['./resultados.component.css']
 })
 export class ResultadosComponent implements OnInit {
-
+	abierto=true;
     platos = [];
 	listaFiltrada=[];
 
-	categorias = ['pizzas','hamburguesas', 'arroces', 'ensaladas', 'pastas', 'carnes', 'sopas', 'sushi']
+	categorias = ['pizzas','hamburguesas','bocadillos', 'arroces', 'ensaladas', 'pastas', 'carnes', 'pescados', 'sopas', 'sushi']
 	cantidad = ['para una persona','para compartir']
 	preferencias = ['sin gluten', 'sin frutos secos', 'sin lactosa', 'vegetariano', 'vegano', 'sin fructosa', 'sin azucar', 'sin huevo']
 
+
+
+	abrircerrar(){
+		this.abierto=this.abierto?false: true;
+	}
 
 	onCheckboxChange(categoria, event) {
 		 if(event.target.checked) {
@@ -40,19 +46,24 @@ export class ResultadosComponent implements OnInit {
 	
 
 	ngOnInit(){
+
+		if(window.innerWidth>=480){
+			this.abierto=false;
+		}
 		
 		//this.users = this.usersService.users
 		this.platoService.getPlatos().subscribe(platos => {
 			console.log(platos);
 			this.platos = platos;
-      for(let i=0; i<this.busquedaService.Busqueda.categoria.length; i++){
-				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.categoria == this.busquedaService.Busqueda.categoria[i]));
-			}
-			this.onFilter();
-		});
+
+			this.onFilter(); 
+			this.busquedaService.Busqueda=new Busqueda;
+			});
+		
 	}
 
 	onFilter(){
+		this.listaFiltrada=[];
 		if(this.busquedaService.Busqueda.categoria !== null){
 			for(let i=0; i<this.busquedaService.Busqueda.categoria.length; i++){
 				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.categoria == this.busquedaService.Busqueda.categoria[i]));
@@ -82,11 +93,7 @@ export class ResultadosComponent implements OnInit {
 				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.temp == this.busquedaService.Busqueda.temperatura[i]));
 			}
 		}
-
-		this.listaFiltrada = this.listaFiltrada.reduce(function(acc, el, i, arr) {
-			  if (arr.indexOf(el) !== i && acc.indexOf(el) < 0) acc.push(el); return acc;
-			}, []);
-			console.log("lista filtrada", this.listaFiltrada)
-		return this.listaFiltrada;
+		 
+		this.listaFiltrada;
 	}
 }

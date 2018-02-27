@@ -22,8 +22,8 @@
       <div class="caracteristicas">
         <h5>Ingredientes: </h5>
         <div *ngFor="let ing of plato.ingredientes">
-          <input type="checkbox">
-          <label for="">{{ing| uppercase}}</label>
+          <input type="checkbox" id="{{ing}}">
+          <label for="{{ing}}">{{ing}}</label>
         </div>
       </div>
       <label>Cantidad</label>

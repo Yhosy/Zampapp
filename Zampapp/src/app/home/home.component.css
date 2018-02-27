@@ -111,120 +111,112 @@ body {
     -moz-appearance: none;
 }
 
-#catpizzas {
+#catPizzas {
     content: url("/assets/img/comida/pizza.png");
 }
 
-.home .pretable div #cathamburguesas {
+.home .pretable div #catHamburguesas {
     content: url("../../assets/img/comida/burguer.png");
 }
 
-.home .pretable div #catbocadillos {
+.home .pretable div #catBocadillos {
     content: url("../../assets/img/comida/bocadillo.png");
 }
 
-.home .pretable div #catensaladas {
+.home .pretable div #catEnsaladas {
     content: url("../../assets/img/comida/ensalada.png");
 }
 
-.home .pretable div #catsopas {
+.home .pretable div #catSopas {
     content: url("../../assets/img/comida/sopa.png");
 }
 
-.home .pretable div #catcarnes {
+.home .pretable div #catCarnes {
     content: url("../../assets/img/comida/carne.png");
 }
 
-.home .pretable div #catpescados {
+.home .pretable div #catPescados {
     content: url("../../assets/img/comida/pescado.png");
 }
 
-.home .pretable div #catpescados {
-    content: url("../../assets/img/comida/pescado.png");
-}
-
-.home .pretable div #catpastas {
+.home .pretable div #catPastas {
     content: url("../../assets/img/comida/pasta.png");
 }
 
-.home .pretable div #catkebabs {
+.home .pretable div #catKebabs {
     content: url("../../assets/img/comida/kebab.png");
 }
 
-.home .pretable div #catsushis {
+.home .pretable div #catSushis {
     content: url("../../assets/img/comida/japonesa.png");
 }
 
-.home .pretable div #catarrozes {
+.home .pretable div #catArrozes {
     content: url("../../assets/img/comida/arroz.png");
 }
 
-.home .pretable div #catvarios {
+.home .pretable div #catVarios {
     content: url("../../assets/img/comida/varios.png");
 }
 
-#catpizzas:checked {
+#catPizzas:checked {
     content: url("/assets/img/comida/pizza2.png");
 }
 
-.home .pretable div #cathamburguesas:checked {
+.home .pretable div #catHamburguesas:checked {
     content: url("../../assets/img/comida/burguer2.png");
 }
 
-.home .pretable div #catbocadillos:checked {
+.home .pretable div #catBocadillos:checked {
     content: url("../../assets/img/comida/bocadillo2.png");
 }
 
-.home .pretable div #catensaladas:checked {
+.home .pretable div #catEnsaladas:checked {
     content: url("../../assets/img/comida/ensalada2.png");
 }
 
-.home .pretable div #catsopas:checked {
+.home .pretable div #catSopas:checked {
     content: url("../../assets/img/comida/sopa2.png");
 }
 
-.home .pretable div #catcarnes:checked {
+.home .pretable div #catCarnes:checked {
     content: url("../../assets/img/comida/carne2.png");
 }
 
-.home .pretable div #catpescados:checked {
+.home .pretable div #catPescados:checked {
     content: url("../../assets/img/comida/pescado2.png");
 }
 
-.home .pretable div #catpescados:checked {
-    content: url("../../assets/img/comida/pescado2.png");
-}
-
-.home .pretable div #catpastas:checked {
+.home .pretable div #catPastas:checked {
     content: url("../../assets/img/comida/pasta2.png");
 }
 
-.home .pretable div #catkebabs:checked {
+.home .pretable div #catKebabs:checked {
     content: url("../../assets/img/comida/kebab2.png");
 }
 
-.home .pretable div #catsushis:checked {
+.home .pretable div #catSushis:checked {
     content: url("../../assets/img/comida/japonesa2.png");
 }
 
-.home .pretable div #catarrozes:checked {
+.home .pretable div #catArrozes:checked {
     content: url("../../assets/img/comida/arroz2.png");
 }
 
-.home .pretable div #catvarios:checked {
+.home .pretable div #catVarios:checked {
     content: url("../../assets/img/comida/varios2.png");
 }
 
 .home .pretable div p {
     margin: 3px 2px;
 }
+.home .random{
+    text-align: center;
+}
 
 @media (max-width: 480px) {
     .home section {
         display: block;
-    }
-    .home .izquierda .random a img {
-        margin: 0 0 10px 37%;
     }
     .home .busqueda a img {
         margin: 5px;
@@ -350,9 +342,6 @@ body {
         width: 350px;
 
     }
-    .home .derecha {
-        margin: 20px;
-    }
 }
 
 @media (min-width: 1281px) {
@@ -370,8 +359,5 @@ body {
     .home .izquierda {
         width: 350px;
 
-    }
-    .home .derecha {
-        margin: 20px;
     }
 }

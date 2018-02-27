@@ -47,8 +47,8 @@ body {
 }
 
 .sectplatosimilares {
+  padding: 5px;
   text-align: center;
-  width: 90%;
   background-color: white;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -57,9 +57,8 @@ body {
 }
 
 .sectplatosrestaurante {
+  padding: 5px;
   text-align: center;
-  width: 90%;
-  height: 125px;
   background-color: white;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -68,14 +67,16 @@ body {
 }
 
 .publicidad {
+  padding: 5px;
   text-align: center;
-  width: 90%;
   height: 200px;
   background-color: white;
   border-radius: 5px;
   margin-bottom: 10px;
   border: 4px #566573 solid;
   display: block;
+  text-align: center;
+  line-height: 9;
 }
 
 .sugerencias {
@@ -119,14 +120,17 @@ button:hover {
     width: auto;
   }
   .sectplatosimilares {
+    margin: 0 20px 20px 20px;
     width: auto;
     height: auto;
   }
   .sectplatosrestaurante {
+    margin: 0 20px 20px 20px;
     width: auto;
     height: auto;
   }
   .publicidad {
+    margin: 0 20px 20px 20px;
     width: auto;
     text-align: center;
     vertical-align: middle;

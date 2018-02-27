@@ -228,9 +228,6 @@ body {
     .home section {
         display: block;
     }
-    .home .izquierda .random a img {
-        margin: 0 0 10px 37%;
-    }
     .home .busqueda a img {
         margin: 5px;
     }

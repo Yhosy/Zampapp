@@ -14,9 +14,25 @@ import { Busqueda } from '../busqueda';
 	styleUrls: ['./resultados.component.css']
 })
 export class ResultadosComponent implements OnInit {
+<<<<<<< HEAD
+	abierto=false;
+    platos = [];
+	listaFiltrada=[];
+
+	categorias = ['Pizzas','Hamburguesas','Bocadillos', 'Arroces', 'Ensaladas', 'Pastas', 'Carnes', 'Pescados', 'Sopas', 'Sushi']
+	cantidad = ['Para una persona','Para compartir']
+	preferencias = ['Sin gluten', 'Sin frutos secos', 'Sin lactosa', 'Vegetariano', 'Vegano', 'Sin fructosa', 'Sin azucar', 'Sin huevo']
+
+
+	
+	
+	abrircerrar(){
+		this.abierto=this.abierto?false: true;
+=======
 	abierto = true;
 	platos = [];
 	listaFiltrada = [];
+  estaEscondido=false;
 
 	categorias = ['pizzas', 'hamburguesas', 'bocadillos', 'arroces', 'ensaladas', 'pastas', 'carnes', 'pescados', 'sopas', 'sushi']
 	cantidad = ['para una persona', 'para compartir']
@@ -26,6 +42,7 @@ export class ResultadosComponent implements OnInit {
 
 	abrircerrar() {
 		this.abierto = this.abierto ? false : true;
+>>>>>>> 3ffc4326ac08cec017c4388a4e5a1d46ef3039bb
 	}
 
 	onCheckboxChange(categoria, event) {
@@ -45,10 +62,18 @@ export class ResultadosComponent implements OnInit {
 	}
 
 
+<<<<<<< HEAD
+		if(window.innerWidth>480){
+			this.abierto=true;
+		}
+		if(window.innerWidth<480){
+			this.abierto=false;
+=======
 	ngOnInit() {
 
 		if (window.innerWidth >= 480) {
 			this.abierto = false;
+>>>>>>> 3ffc4326ac08cec017c4388a4e5a1d46ef3039bb
 		}
 
 		//this.users = this.usersService.users
@@ -93,5 +118,8 @@ export class ResultadosComponent implements OnInit {
 		}
 
 		this.listaFiltrada;
+    if (this.listaFiltrada.length<0){
+			this.estaEscondido = true;
+		}
 	}
 }

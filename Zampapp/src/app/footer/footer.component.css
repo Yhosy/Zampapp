@@ -69,7 +69,6 @@ footer>.enlaces>div>a {
     margin-right: 5pt;
 }
 
-@media (max-width:800px) {
     footer>.enlaces {
         margin-left: 0pt;
     }

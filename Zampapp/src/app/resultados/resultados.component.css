@@ -7,7 +7,7 @@
   display: flex;
 }
 
-.result #divEscondido h2 {
+.result .divEscondido h2 {
   font-size: 12px;
   text-align: center;
   color: #566573;
@@ -96,6 +96,15 @@ input{
   background-color: #566573 !important;
 }
 
+#escondido{
+  width: auto;
+  height: 45px;
+  background-color: #fff3f3;
+  border: solid 2px #f19d9c;
+  color: #873b49;
+  padding-top: 20px;
+}
+
 @media screen and (max-width:480px) {
   section .result {
       display: block;
@@ -115,7 +124,7 @@ input{
   #responsiveBusqueda{
     display: block;
     width: 200px;
-    /* height: 30px; */
+    height: 30px;
     text-align: center;
     margin:auto;
     font-size: 12px;
@@ -137,8 +146,8 @@ input{
     height: 870px;
     width: 250px;
 }
-  /* #responsiveBusqueda{
+  #responsiveBusqueda{
     display: none;
     box-shadow: none;
-  } */
+  }
 }

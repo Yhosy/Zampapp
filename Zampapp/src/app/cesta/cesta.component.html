@@ -1,3 +1,20 @@
 <section class="cesta">
-
+    <ul>
+        <li *ngFor="let plato of listaCesta">
+            <h4>{{plato.nombre}}</h4>
+            <div>
+                <p>Precio: {{plato.precio}} €</p>
+            </div>
+            <div>
+                <p>Restaurante: {{plato.restaurante}}</p>
+            </div>
+            <!-- <div>
+            <<h6>Cantidad:
+                <p>{{}}</p>
+            </h6></div> -->
+        </li>
+    </ul>
+    <!-- <h5>Precio total:
+        <p>{{}}</p>
+    </h5> -->
 </section>

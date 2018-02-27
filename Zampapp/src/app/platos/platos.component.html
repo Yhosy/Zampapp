@@ -1,5 +1,4 @@
 <div class="divTableCell">
-<div class="flipa">
 	<div class="flipper" appHover>
 		<div class="front">
 			<h3>{{plato.nombre}}</h3>
@@ -19,7 +18,9 @@
 				</div>
 			</a>
 		</div>
-	</div>  
-	<input type="number" size="3" name="num" min="1" max="100" value="0"/>
-	<button class="añadir" (click)="agregar_Cesta()"></button>
+	</div> 
+	<div id="añadir"> 
+		<input type="number" size="3" name="num" min="1" max="100" value="0"/>
+		<button id="btnañadir" (click)="agregar_Cesta()"></button>
+	</div>
 </div>

@@ -25,7 +25,11 @@
         </p>
       </form>
     </div>
-  <div class="button"><button (click)=onFilter()>Submit</button></div>
+  <div class="busqueda">
+    <button class="button" (click)="onFilter()" id="botonFiltro">
+      <img src="../../assets/img/icono/buscar.png" alt="" class="busqueda" id="btnFiltro">
+    </button>
+  </div>
   </div>
 
   <div class="resultados">
@@ -36,9 +40,7 @@
         *ngFor = "let plato of listaFiltrada"
         [plato] = "plato"
         ></app-platos> 
-      </div>
-      <!--<app-product-details></app-product-details>
-      <router-outlet></router-outlet>-->   
+      </div>  
     </div>
   </div>
 </div>

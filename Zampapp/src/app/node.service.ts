@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Plato } from './plato';
+import { Categoria } from './categoria';
 const urlApi = 'http://localhost:8080/';
 
 @Injectable()
@@ -12,7 +13,11 @@ export class NodeService {
     return this.http.get(urlApi + 'platos');
   }
 
-  createPlato(plato: Plato) {
-    return this.http.post(urlApi + 'platos', plato);
+  getCategorias() {
+    return this.http.get(urlApi + 'categorias');
   }
+
+  // createPlato(plato: Plato) {
+  //   return this.http.post(urlApi + 'platos', plato);
+  // }
 }

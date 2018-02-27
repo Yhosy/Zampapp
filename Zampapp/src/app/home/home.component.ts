@@ -21,9 +21,10 @@ export class HomeComponent implements OnInit {
   }
 
   Escribir(texto) {
-    this.filtrado = Categorias.filter((element, i) => {
-      return element.value.indexOf(texto) >= 0 ;
-    })
+    // importar categorias de mongo
+    // this.filtrado = Categorias.filter((element, i) => {
+    //   return element.value.indexOf(texto) >= 0 ;
+    // })
   }
 
   Hola(e) {

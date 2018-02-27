@@ -111,112 +111,120 @@ body {
     -moz-appearance: none;
 }
 
-#catPizzas {
+#catpizzas {
     content: url("/assets/img/comida/pizza.png");
 }
 
-.home .pretable div #catHamburguesas {
+.home .pretable div #cathamburguesas {
     content: url("../../assets/img/comida/burguer.png");
 }
 
-.home .pretable div #catBocadillos {
+.home .pretable div #catbocadillos {
     content: url("../../assets/img/comida/bocadillo.png");
 }
 
-.home .pretable div #catEnsaladas {
+.home .pretable div #catensaladas {
     content: url("../../assets/img/comida/ensalada.png");
 }
 
-.home .pretable div #catSopas {
+.home .pretable div #catsopas {
     content: url("../../assets/img/comida/sopa.png");
 }
 
-.home .pretable div #catCarnes {
+.home .pretable div #catcarnes {
     content: url("../../assets/img/comida/carne.png");
 }
 
-.home .pretable div #catPescados {
+.home .pretable div #catpescados {
     content: url("../../assets/img/comida/pescado.png");
 }
 
-.home .pretable div #catPastas {
+.home .pretable div #catpescados {
+    content: url("../../assets/img/comida/pescado.png");
+}
+
+.home .pretable div #catpastas {
     content: url("../../assets/img/comida/pasta.png");
 }
 
-.home .pretable div #catKebabs {
+.home .pretable div #catkebabs {
     content: url("../../assets/img/comida/kebab.png");
 }
 
-.home .pretable div #catSushis {
+.home .pretable div #catsushis {
     content: url("../../assets/img/comida/japonesa.png");
 }
 
-.home .pretable div #catArrozes {
+.home .pretable div #catarrozes {
     content: url("../../assets/img/comida/arroz.png");
 }
 
-.home .pretable div #catVarios {
+.home .pretable div #catvarios {
     content: url("../../assets/img/comida/varios.png");
 }
 
-#catPizzas:checked {
+#catpizzas:checked {
     content: url("/assets/img/comida/pizza2.png");
 }
 
-.home .pretable div #catHamburguesas:checked {
+.home .pretable div #cathamburguesas:checked {
     content: url("../../assets/img/comida/burguer2.png");
 }
 
-.home .pretable div #catBocadillos:checked {
+.home .pretable div #catbocadillos:checked {
     content: url("../../assets/img/comida/bocadillo2.png");
 }
 
-.home .pretable div #catEnsaladas:checked {
+.home .pretable div #catensaladas:checked {
     content: url("../../assets/img/comida/ensalada2.png");
 }
 
-.home .pretable div #catSopas:checked {
+.home .pretable div #catsopas:checked {
     content: url("../../assets/img/comida/sopa2.png");
 }
 
-.home .pretable div #catCarnes:checked {
+.home .pretable div #catcarnes:checked {
     content: url("../../assets/img/comida/carne2.png");
 }
 
-.home .pretable div #catPescados:checked {
+.home .pretable div #catpescados:checked {
     content: url("../../assets/img/comida/pescado2.png");
 }
 
-.home .pretable div #catPastas:checked {
+.home .pretable div #catpescados:checked {
+    content: url("../../assets/img/comida/pescado2.png");
+}
+
+.home .pretable div #catpastas:checked {
     content: url("../../assets/img/comida/pasta2.png");
 }
 
-.home .pretable div #catKebabs:checked {
+.home .pretable div #catkebabs:checked {
     content: url("../../assets/img/comida/kebab2.png");
 }
 
-.home .pretable div #catSushis:checked {
+.home .pretable div #catsushis:checked {
     content: url("../../assets/img/comida/japonesa2.png");
 }
 
-.home .pretable div #catArrozes:checked {
+.home .pretable div #catarrozes:checked {
     content: url("../../assets/img/comida/arroz2.png");
 }
 
-.home .pretable div #catVarios:checked {
+.home .pretable div #catvarios:checked {
     content: url("../../assets/img/comida/varios2.png");
 }
 
 .home .pretable div p {
     margin: 3px 2px;
 }
-.home .random{
-    text-align: center;
-}
 
 @media (max-width: 480px) {
     .home section {
         display: block;
+    }
+    .home .izquierda .random a img {
+        margin: 0 0 10px 37%;
     }
     .home .busqueda a img {
         margin: 5px;

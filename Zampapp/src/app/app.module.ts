@@ -19,6 +19,7 @@ import { HomeIzquierdaComponent } from './home-izquierda/home-izquierda.componen
 import { HomeDerechaComponent } from './home-derecha/home-derecha.component';
 import { CestaComponent } from './cesta/cesta.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PopupComponent } from './popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     HoverDirective,
     HomeIzquierdaComponent,
     HomeDerechaComponent,
-    CestaComponent
+    CestaComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,

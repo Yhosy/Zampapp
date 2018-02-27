@@ -4,6 +4,8 @@ import { Busqueda } from '../busqueda';
 import { Router } from '@angular/router';
 
 import { NodeService } from '../node.service';
+import { timeout } from 'q';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-preguntas',
@@ -16,17 +18,27 @@ export class PreguntasComponent implements OnInit {
   inputs = [];
   names = ["cantidad", "temperatura", "picante", "preferencia"];
   name: string;
+  popupdx;
   constructor(
     private busquedaService: BusquedaService,
     private router: Router,
-    private _node: NodeService
+    // private _node: NodeService
   ) { }
 
   ngOnInit() {
-    this._node.getPlatos().subscribe(data => {
-      this._platos = data;
-    });
+    // this._node.getPlatos().subscribe(data => {
+    //   this._platos = data;
+    // });
   }
+
+  estadoPopup(e) {
+    this.popupdx = e;
+    window.setTimeout(() => {
+      e = false;
+      this.popupdx = e;
+    }, 6000);
+  }
+
   validaForm(arrInputs) {
     var contador = 0;
     for (let i = 0; i < arrInputs.length; i++) {
@@ -39,7 +51,8 @@ export class PreguntasComponent implements OnInit {
       };
     };
     if (contador == 0) {
-      alert("Algo te falta por rellenar, aunque sea rellena algo please, ¡¡¡X tus ZampApp's!!!");
+      this.estadoPopup(event);
+      // alert("Algo te falta por rellenar, aunque sea rellena algo please, ¡¡¡X tus ZampApp's!!!");
       return false;
     } else {
       return true;

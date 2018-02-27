@@ -14,7 +14,7 @@ import { Busqueda } from '../busqueda';
 	styleUrls: ['./resultados.component.css']
 })
 export class ResultadosComponent implements OnInit {
-	platos = [];
+	platos :any;
 	abierto=false;
 	listaFiltrada=[];
 

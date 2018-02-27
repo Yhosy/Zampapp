@@ -40,6 +40,7 @@
         *ngFor = "let plato of listaFiltrada"
         [plato] = "plato"
         ></app-platos> 
+        <div id="escondido" [ngClass] = "{'escondido': estaEscondido}">Lo sentimos, pero no tenemos platos de esta categoría</div>
       </div>  
     </div>
   </div>

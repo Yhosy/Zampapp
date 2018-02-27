@@ -32,6 +32,7 @@ export class ResultadosComponent implements OnInit {
 	abierto = true;
 	platos = [];
 	listaFiltrada = [];
+  estaEscondido=false;
 
 	categorias = ['pizzas', 'hamburguesas', 'bocadillos', 'arroces', 'ensaladas', 'pastas', 'carnes', 'pescados', 'sopas', 'sushi']
 	cantidad = ['para una persona', 'para compartir']
@@ -117,5 +118,8 @@ export class ResultadosComponent implements OnInit {
 		}
 
 		this.listaFiltrada;
+    if (this.listaFiltrada.length<0){
+			this.estaEscondido = true;
+		}
 	}
 }

@@ -1,22 +1,23 @@
-import {Http} from '@angular/http';
+import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
-import  'rxjs/add/operator/map';
+import 'rxjs/add/operator/map';
+import { HttpClient } from '@angular/common/http';
+import { Plato } from './plato';
+const urlApi = 'http://localhost:8080/';
 
 
 @Injectable()
 
 export class PlatoService {
 
-	constructor(private http:Http){}
+	constructor(private http: Http,
+		private httpClient: HttpClient) { }
 
-	getPlatos(){
-		return this.http.get ( 'http://www.mocky.io/v2/5a8c80463000007500323f54')
-			.map(response => response.json())			
+	getPlatos() {
+		return this.httpClient.get(urlApi + 'platos');
 	}
 
-	getPlato(id: number) {
-		return this.http.get ( 'http://www.mocky.io/v2/5a8c80463000007500323f54')
-			.map(response => response.json()
-			.filter(plato => plato.id ===id))	
+	getPlato(id: string) {
+		return this.httpClient.get(urlApi + 'platos/' + id);
 	}
 }

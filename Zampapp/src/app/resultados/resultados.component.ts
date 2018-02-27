@@ -14,16 +14,14 @@ import { Busqueda } from '../busqueda';
 	styleUrls: ['./resultados.component.css']
 })
 export class ResultadosComponent implements OnInit {
-	abierto = true;
-	platos :any;
-	listaFiltrada = [];
-  estaEscondido=false;
+	platos = [];
+	abierto=false;
+	listaFiltrada=[];
 
-	categorias = ['pizzas', 'hamburguesas', 'bocadillos', 'arroces', 'ensaladas', 'pastas', 'carnes', 'pescados', 'sopas', 'sushi']
-	cantidad = ['para una persona', 'para compartir']
-	preferencias = ['sin gluten', 'sin frutos secos', 'sin lactosa', 'vegetariano', 'vegano', 'sin fructosa', 'sin azucar', 'sin huevo']
-
-
+	categorias = ['Pizzas','Hamburguesas','Bocadillos', 'Arroces', 'Ensaladas', 'Pastas', 'Carnes', 'Pescados', 'Sopas', 'Sushi']
+	cantidad = ['Para una persona','Para compartir']
+	preferencias = ['Sin gluten', 'Sin frutos secos', 'Sin lactosa', 'Vegetariano', 'Vegano', 'Sin fructosa', 'Sin azucar', 'Sin huevo']
+	estaEscondido=false;
 
 	abrircerrar() {
 		this.abierto = this.abierto ? false : true;
@@ -45,11 +43,14 @@ export class ResultadosComponent implements OnInit {
 	constructor(private platoService: PlatoService, private busquedaService: BusquedaService) {
 	}
 
-
+		
 	ngOnInit() {
 
 		if (window.innerWidth >= 480) {
 			this.abierto = false;
+		}
+		if (window.innerWidth <= 480) {
+			this.abierto = true;
 		}
 
 		//this.users = this.usersService.users
@@ -92,10 +93,10 @@ export class ResultadosComponent implements OnInit {
 				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.temp == this.busquedaService.Busqueda.temperatura[i]));
 			}
 		}
-
-		this.listaFiltrada;
-    if (this.listaFiltrada.length<0){
-			this.estaEscondido = true;
+		if (this.listaFiltrada.length==0){
+			this.estaEscondido = !this.estaEscondido;
 		}
+		this.listaFiltrada;
+	    
 	}
 }

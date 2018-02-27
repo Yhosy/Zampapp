@@ -13,6 +13,5 @@ export const Categorias: Categoria[] = [
     new Categoria('kebabs'),
     new Categoria('sushis'),
     new Categoria('arrozes'),
-    new Categoria('varios')
-        
+    new Categoria('varios')     
 ];

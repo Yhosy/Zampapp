@@ -24,7 +24,7 @@
                     <div class="pretable" *ngFor="let categoria of filtrado">
                         <div>
                             <input #input name='categoria' [value]=categoria.value type="checkbox" class="transparent" [id]=categoria.id>
-                            <p>{{categoria.value}}</p>
+                            <p>{{categoria.value.charAt(0).toUpperCase() + categoria.value.slice(1)}}</p>
                         </div>
                     </div>
                     <div class="busqueda">

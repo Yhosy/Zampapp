@@ -8,12 +8,12 @@
         <h6>Categorías</h6>
         <p *ngFor="let categoria of categorias">
           <input [(ngModel)]="categoria.checked" type="checkbox" class="transparent" name="categoria" [id]="categoria" [value]="categoria" (click)="onCheckboxChange(categoria,$event)" />
-          <label [for]="categoria">{{categoria}}</label>
+          <label [for]="categoria">{{categoria.charAt(0).toUpperCase() + categoria.slice(1)}}</label>
         </p>
         <h6>Cantidad</h6>
         <p *ngFor="let cantidad of cantidad">
           <input [(ngModel)]="cantidad.checked" type="checkbox" class="transparent" name="cantidad" required [id]="cantidad" [value]="cantidad" (click)="onCheckboxChange(cantidad,$event)"/> 
-          <label [for]="cantidad">{{cantidad}}</label>
+          <label [for]="cantidad">{{cantidad.charAt(0).toUpperCase() + cantidad.slice(1)}}</label>
         </p>
         <div *ngIf="cantidad.invalid"> 
             Gender required. 
@@ -21,7 +21,7 @@
         <h6>Preferencia</h6>
         <p *ngFor="let preferencia of preferencias">
           <input [(ngModel)]="preferencia.checked" type="checkbox" class="transparent" name="preferencia" [id]="preferencia" [value]="preferencia" (click)="onCheckboxChange(preferencia,$event)"/>
-          <label [for]="preferencia">{{preferencia}}</label>
+          <label [for]="preferencia">{{preferencia.charAt(0).toUpperCase() + preferencia.slice(1)}}</label>
         </p>
       </form>
     </div>

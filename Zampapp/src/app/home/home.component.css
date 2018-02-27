@@ -350,9 +350,6 @@ body {
         width: 350px;
 
     }
-    .home .derecha {
-        margin: 20px;
-    }
 }
 
 @media (min-width: 1281px) {
@@ -370,8 +367,5 @@ body {
     .home .izquierda {
         width: 350px;
 
-    }
-    .home .derecha {
-        margin: 20px;
     }
 }

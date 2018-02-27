@@ -5,6 +5,7 @@
     margin: 0px;
     font-size: 15pt;
 }
+
 h3 {
     font-size: 40px;
     font-weight: 700;
@@ -29,7 +30,7 @@ body {
     margin: 0px;
 }
 
-.tit h1{
+.tit h1 {
     font-size: 30px;
 }
 
@@ -49,6 +50,10 @@ body {
     padding-bottom: 20px;
     text-align: center;
     vertical-align: middle;
+}
+
+.home .random {
+    text-align: center;
 }
 
 .home .izquierda {
@@ -348,7 +353,6 @@ body {
     }
     .home .izquierda {
         width: 350px;
-
     }
 }
 
@@ -366,6 +370,5 @@ body {
     }
     .home .izquierda {
         width: 350px;
-
     }
 }

@@ -1,6 +1,7 @@
 .result {
   display: flex;
   background-color:#f5f5f5;
+  font-family: Helvetica, Arial;
 }
 
 .result section .result {

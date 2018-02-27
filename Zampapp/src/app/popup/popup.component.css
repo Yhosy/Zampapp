@@ -1,0 +1,21 @@
+.popup {
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: #ea5b0c;
+    border-radius: 20pt;
+    border: 4px #566573 solid;
+    position: absolute;
+    top: 200px;
+}
+
+.popup p {
+    text-align: center;
+    padding: 20px;
+    color: white
+}
+
+@media (max-width:900px) {
+    .popup {
+        top: 600px;
+    }
+}

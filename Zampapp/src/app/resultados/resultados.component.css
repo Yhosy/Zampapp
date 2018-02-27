@@ -115,7 +115,7 @@ input{
   #responsiveBusqueda{
     display: block;
     width: 200px;
-    height: 30px;
+    /* height: 30px; */
     text-align: center;
     margin:auto;
     font-size: 12px;
@@ -137,8 +137,8 @@ input{
     height: 870px;
     width: 250px;
 }
-  #responsiveBusqueda{
+  /* #responsiveBusqueda{
     display: none;
     box-shadow: none;
-  }
+  } */
 }

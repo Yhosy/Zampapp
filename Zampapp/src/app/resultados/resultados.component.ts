@@ -14,16 +14,17 @@ import { Busqueda } from '../busqueda';
   styleUrls: ['./resultados.component.css']
 })
 export class ResultadosComponent implements OnInit {
-	abierto=true;
+	abierto=false;
     platos = [];
 	listaFiltrada=[];
 
-	categorias = ['pizzas','hamburguesas','bocadillos', 'arroces', 'ensaladas', 'pastas', 'carnes', 'pescados', 'sopas', 'sushi']
-	cantidad = ['para una persona','para compartir']
-	preferencias = ['sin gluten', 'sin frutos secos', 'sin lactosa', 'vegetariano', 'vegano', 'sin fructosa', 'sin azucar', 'sin huevo']
+	categorias = ['Pizzas','Hamburguesas','Bocadillos', 'Arroces', 'Ensaladas', 'Pastas', 'Carnes', 'Pescados', 'Sopas', 'Sushi']
+	cantidad = ['Para una persona','Para compartir']
+	preferencias = ['Sin gluten', 'Sin frutos secos', 'Sin lactosa', 'Vegetariano', 'Vegano', 'Sin fructosa', 'Sin azucar', 'Sin huevo']
 
 
-
+	
+	
 	abrircerrar(){
 		this.abierto=this.abierto?false: true;
 	}
@@ -47,7 +48,10 @@ export class ResultadosComponent implements OnInit {
 
 	ngOnInit(){
 
-		if(window.innerWidth>=480){
+		if(window.innerWidth>480){
+			this.abierto=true;
+		}
+		if(window.innerWidth<480){
 			this.abierto=false;
 		}
 		

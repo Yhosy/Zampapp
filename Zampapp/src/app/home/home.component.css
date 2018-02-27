@@ -29,6 +29,10 @@ body {
     margin: 0px;
 }
 
+.tit h1{
+    font-size: 30px;
+}
+
 .home section {
     display: flex;
     padding-bottom: 10px;

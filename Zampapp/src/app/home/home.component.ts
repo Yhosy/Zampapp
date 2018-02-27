@@ -33,6 +33,5 @@ export class HomeComponent implements OnInit {
         this.busquedaService.Busqueda.categoria.push(x.nativeElement.attributes.value.value);
       }
     });
-    console.log(this.busquedaService.Busqueda);
   }
 } 

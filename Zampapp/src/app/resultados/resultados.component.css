@@ -1,5 +1,6 @@
 .result {
   display: flex;
+  background-color:#f5f5f5;
 }
 
 .result section .result {
@@ -120,9 +121,9 @@ input{
     width: 95% !important;
   }
 
-  #divEscondido{
+  /*#divEscondido{
     display: none;
-  }
+  }*/
   #responsiveBusqueda{
     display: block;
     width: 200px;
@@ -148,8 +149,8 @@ input{
     height: 870px;
     width: 250px;
 }
-  #responsiveBusqueda{
+  /*#responsiveBusqueda{
     display: none;
     box-shadow: none;
-  }
+  }*/
 }

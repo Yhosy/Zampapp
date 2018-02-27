@@ -14,13 +14,13 @@ import { Busqueda } from '../busqueda';
 	styleUrls: ['./resultados.component.css']
 })
 export class ResultadosComponent implements OnInit {
-	platos :any;
+	platos = [];
 	abierto=false;
 	listaFiltrada=[];
 
-	categorias = ['Pizzas','Hamburguesas','Bocadillos', 'Arroces', 'Ensaladas', 'Pastas', 'Carnes', 'Pescados', 'Sopas', 'Sushi']
-	cantidad = ['Para una persona','Para compartir']
-	preferencias = ['Sin gluten', 'Sin frutos secos', 'Sin lactosa', 'Vegetariano', 'Vegano', 'Sin fructosa', 'Sin azucar', 'Sin huevo']
+	categorias = ['pizzas','hamburguesas','bocadillos', 'arroces', 'ensaladas', 'pastas', 'carnes', 'pescados', 'sopas', 'sushi']
+	cantidad = ['para una persona','para compartir']
+	preferencias = ['sin gluten', 'sin frutos secos', 'sin lactosa', 'vegetariano', 'vegano', 'sin fructosa', 'sin azucar', 'sin huevo']
 	estaEscondido=false;
 
 	abrircerrar() {

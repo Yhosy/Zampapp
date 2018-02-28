@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import 'rxjs/add/operator/map';
 import { BusquedaService } from '../busqueda.service'
 import { Busqueda } from '../busqueda';
+import { ListacestaService } from '../listacesta.service';
 
 
 @Component({
@@ -40,7 +41,9 @@ export class ResultadosComponent implements OnInit {
 		console.log(this.busquedaService.Busqueda);
 	}
 
-	constructor(private platoService: PlatoService, private busquedaService: BusquedaService) {
+	constructor(private platoService: PlatoService,
+		private busquedaService: BusquedaService,
+		private listaService: ListacestaService) {this.listaService.onEsconderCesta.emit(true);
 	}
 
 		

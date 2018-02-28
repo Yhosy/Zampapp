@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NodeService } from "./node.service";
+import { ListacestaService } from "./listacesta.service";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -46,7 +47,8 @@ import { PopupComponent } from './popup/popup.component';
   ],
   providers: [
     BusquedaService,
-    NodeService
+    NodeService,
+    ListacestaService
   ],
   bootstrap: [AppComponent]
 })

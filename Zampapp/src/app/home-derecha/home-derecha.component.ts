@@ -16,9 +16,7 @@ export class HomeDerechaComponent implements OnInit {
   constructor(private busquedaService: BusquedaService) { }
 
   ngOnInit() {
-
     this.Escribir('');
-
   }
 
 

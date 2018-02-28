@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BusquedaService } from '../busqueda.service';
 import { Busqueda } from '../busqueda';
 import { Router } from '@angular/router';
+import { ListacestaService } from '../listacesta.service';
 
 import { NodeService } from '../node.service';
 import { timeout } from 'q';
@@ -22,8 +23,8 @@ export class PreguntasComponent implements OnInit {
   constructor(
     private busquedaService: BusquedaService,
     private router: Router,
-    // private _node: NodeService
-  ) { }
+    private listaService: ListacestaService
+  ) {this.listaService.onEsconderCesta.emit(true); }
 
   ngOnInit() {
     // this._node.getPlatos().subscribe(data => {

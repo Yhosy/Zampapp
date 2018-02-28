@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map';
 import { BusquedaService } from '../busqueda.service'
 import { Busqueda } from '../busqueda';
 import { ListacestaService } from '../listacesta.service';
+import {URLSearchParams} from '@angular/http'
 
 
 @Component({
@@ -40,6 +41,12 @@ export class ResultadosComponent implements OnInit {
 			}
 		}
 		console.log(this.busquedaService.Busqueda);
+		let params = new URLSearchParams();
+		for(let key in this.busquedaService.Busqueda){
+		    params.set(key, this.busquedaService.Busqueda[key])
+
+		}
+		console.log("http://resultados?" + params.toString());
 	}
 
 	constructor(private platoService: PlatoService,
@@ -51,59 +58,23 @@ export class ResultadosComponent implements OnInit {
 
 	ngOnInit() {
 
-		if (window.innerWidth <= 480) {
+		if (window.innerWidth >= 480) {
 			this.abierto = false;
-		} else {
+		}
+		if (window.innerWidth <= 480) {
 			this.abierto = true;
 		}
-
-
-		//this.users = this.usersService.users
-		this.platoService.getPlatos().subscribe(platos => {
-			this.platos = platos;
-			this.onFilter();
-			this.busquedaService.Busqueda = new Busqueda;
-		});
+		this.buscar();
 
 	}
 
-	onFilter() {
-		this.listaFiltrada = [];
-		if (this.busquedaService.Busqueda.categoria !== null) {
-			for (let i = 0; i < this.busquedaService.Busqueda.categoria.length; i++) {
-				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.categoria == this.busquedaService.Busqueda.categoria[i]));
-			}
-		}
-
-		if (this.busquedaService.Busqueda.cantidad !== null) {
-			for (let i = 0; i < this.busquedaService.Busqueda.cantidad.length; i++) {
-				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.cantidad == this.busquedaService.Busqueda.cantidad[i]));
-			}
-		}
-
-		if (this.busquedaService.Busqueda.preferencia !== null) {
-			for (let i = 0; i < this.busquedaService.Busqueda.preferencia.length; i++) {
-				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.preferencia == this.busquedaService.Busqueda.preferencia[i]));
-			}
-		}
-
-		if (this.busquedaService.Busqueda.picante !== null) {
-			for (let i = 0; i < this.busquedaService.Busqueda.picante.length; i++) {
-				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.pic == this.busquedaService.Busqueda.picante[i]));
-			}
-		}
-
-		if (this.busquedaService.Busqueda.temperatura !== null) {
-			for (let i = 0; i < this.busquedaService.Busqueda.temperatura.length; i++) {
-				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.temp == this.busquedaService.Busqueda.temperatura[i]));
-			}
-		}
-		if (this.listaFiltrada.length == 0) {
-			this.avisodx = true;
-		} else {
-			this.avisodx = false;
-		}
-		this.listaFiltrada;
-		console.log("filtro", this.listaFiltrada);
+	buscar(){
+		this.platoService.getPlatos(this.busquedaService.Busqueda).subscribe(platos => {
+			this.platos = platos;
+			console.log("platos", this.platos)
+			this.busquedaService.Busqueda = new Busqueda;
+		});
+		
+		return this.platos;
 	}
 }

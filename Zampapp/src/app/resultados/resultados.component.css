@@ -1,6 +1,6 @@
 .result {
   display: flex;
-  background-color:#f5f5f5;
+  background-color: #f5f5f5;
   font-family: Helvetica, Arial;
 }
 
@@ -28,12 +28,12 @@ form h6 {
   border-radius: 5px
 }
 
-form{
-	font-size: 16px;
+form {
+  font-size: 16px;
 }
 
-input{
-	cursor: pointer;
+input {
+  cursor: pointer;
 }
 
 .result a {
@@ -41,6 +41,16 @@ input{
   color: #C0CA33;
 }
 
+#responsiveBusqueda {
+  padding: 3px;
+  border: #566573 2px solid;
+  border-radius: 5px;
+  width: 250px;
+  height: 50px;
+  background-color: #C0CA33;
+  color: #fff3f3;
+  font-size: 25px;
+}
 
 .result button:hover {
   box-shadow: 0 3px 34px rgba(0, 0, 0, .25);
@@ -94,12 +104,11 @@ input{
   bottom: 10px;
 }
 
-.tooltip-inner{
+.tooltip-inner {
   background-color: #566573 !important;
 }
 
-
-#escondido{
+#escondido {
   display: block;
   width: auto;
   height: 45px;
@@ -111,45 +120,41 @@ input{
 
 @media screen and (max-width:480px) {
   section .result {
-      display: block;
-  }
-
-  .result{
     display: block;
   }
-
-  .slider-horizontal{
+  .result {
+    display: block;
+  }
+  .slider-horizontal {
     width: 95% !important;
   }
-
   /*#divEscondido{
     display: none;
   }*/
-  #responsiveBusqueda{
+  #responsiveBusqueda {
+    border: #C0CA33 3px solid;
     display: block;
     width: 200px;
     height: 30px;
     text-align: center;
-    margin:auto;
+    margin: auto;
     font-size: 12px;
     box-shadow: none;
   }
-  .filtro{
+  .filtro {
     display: block;
     width: auto;
   }
 }
 
 @media screen and (min-width:481px) {
-
-
   .result .resultados {
-      width: 78%;
+    width: 78%;
   }
   .result div.filtro {
     height: 870px;
     width: 250px;
-}
+  }
   /*#responsiveBusqueda{
     display: none;
     box-shadow: none;

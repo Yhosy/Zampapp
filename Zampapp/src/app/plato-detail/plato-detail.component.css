@@ -120,7 +120,7 @@ button:hover {
   height: auto;
 }
 
-@media (max-width: 481px) {
+@media (max-width: 750px) {
   .detalles {
     display: block;
   }

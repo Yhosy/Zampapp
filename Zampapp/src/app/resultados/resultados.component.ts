@@ -15,14 +15,14 @@ import { ListacestaService } from '../listacesta.service';
 	styleUrls: ['./resultados.component.css']
 })
 export class ResultadosComponent implements OnInit {
-	platos :any;
-	abierto=false;
-	listaFiltrada=[];
+	platos: any;
+	abierto = false;
+	listaFiltrada = [];
 
-	categorias = ['pizzas','hamburguesas','bocadillos', 'arroces', 'ensaladas', 'pastas', 'carnes', 'pescados', 'sopas', 'sushi']
-	cantidad = ['para una persona','para compartir']
+	categorias = ['pizzas', 'hamburguesas', 'bocadillos', 'arroces', 'ensaladas', 'pastas', 'carnes', 'pescados', 'sopas', 'sushi']
+	cantidad = ['para una persona', 'para compartir']
 	preferencias = ['sin gluten', 'sin frutos secos', 'sin lactosa', 'vegetariano', 'vegano', 'sin fructosa', 'sin azucar', 'sin huevo']
-	estaEscondido=false;
+	estaEscondido = false;
 
 	abrircerrar() {
 		this.abierto = this.abierto ? false : true;
@@ -43,18 +43,19 @@ export class ResultadosComponent implements OnInit {
 
 	constructor(private platoService: PlatoService,
 		private busquedaService: BusquedaService,
-		private listaService: ListacestaService) {this.listaService.onEsconderCesta.emit(true);
+		private listaService: ListacestaService) {
+			this.listaService.onEsconderCesta.emit(true);
 	}
 
-		
+
 	ngOnInit() {
 
-		if (window.innerWidth >= 480) {
-			this.abierto = false;
-		}
 		if (window.innerWidth <= 480) {
+			this.abierto = false;
+		} else {
 			this.abierto = true;
 		}
+
 
 		//this.users = this.usersService.users
 		this.platoService.getPlatos().subscribe(platos => {
@@ -96,10 +97,10 @@ export class ResultadosComponent implements OnInit {
 				this.listaFiltrada = this.listaFiltrada.concat(this.platos.filter(plato => plato.temp == this.busquedaService.Busqueda.temperatura[i]));
 			}
 		}
-		if (this.listaFiltrada.length==0){
+		if (this.listaFiltrada.length == 0) {
 			this.estaEscondido = !this.estaEscondido;
 		}
 		this.listaFiltrada;
-	    
+
 	}
 }

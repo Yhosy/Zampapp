@@ -27,8 +27,10 @@
         </div>
       </div>
       <label>Cantidad</label>
-      <input type="number" name="quantity" min="1" max="10">
-      <button id="comprar">Comprar</button>
+      <form #b="ngForm">
+        <input id="cantidad" type="number" name="num" min="1" max="100" placeholder="0" ngModel>
+      </form>
+      <button id="btncomprar" (click)="agregar_Cesta(plato, b)"></button>
     </div>
   </div>
   <div class="sugerencias">

@@ -5,6 +5,7 @@ import { Location } from '@angular/common';
 import { ResultadosComponent } from '../resultados/resultados.component';
 import { Router } from '@angular/router';
 import { ListacestaService } from '../listacesta.service';
+import { Plato } from '../plato';
 
 @Component({
 	selector: 'app-plato-detail',
@@ -33,6 +34,10 @@ export class PlatoDetailComponent implements OnInit {
 				this.plato = plato;
 			});
 	}
+
+	agregar_Cesta(objPlato, cantidad) {
+		this.listaService.agragaPlato(objPlato, cantidad.value.num)   
+	  }
 
 }
 

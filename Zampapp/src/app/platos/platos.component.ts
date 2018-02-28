@@ -20,9 +20,8 @@ export class PlatosComponent implements OnInit {
 
   }
 
-  agregar_Cesta(objPlato) {
-    console.log(objPlato);
-    this.listaService.agragaPlato(objPlato)   
+  agregar_Cesta(objPlato, cantidad) {
+    this.listaService.agragaPlato(objPlato, cantidad.value.num);  
   }
 
 }

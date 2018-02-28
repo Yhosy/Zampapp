@@ -18,9 +18,12 @@
 				</div>
 			</a>
 		</div>
-	</div> 
-	<div id="añadir"> 
-		<input id="cantidad" type="number" size="3" name="num" min="1" max="100" value="0"/>
-		<button id="btnañadir" (click)="agregar_Cesta(plato)"></button>
+	</div>
+	<div id="añadir">
+		<form #a="ngForm">
+			<input id="cantidad" type="number" name="num" min="1" max="100" placeholder="0" ngModel/>
+		<button id="btnañadir" (click)="agregar_Cesta(plato, a)"></button>
+	</form>
+		
 	</div>
 </div>

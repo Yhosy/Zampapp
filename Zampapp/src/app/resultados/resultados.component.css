@@ -16,10 +16,12 @@
   margin-bottom: 25px;
 }
 
-form h6 {
-  color: #566573;
-  font-size: 12px;
-  margin: 5px 0;
+form h3 {
+  color: #D35400;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  margin-top: 15px;
 }
 
 .result img {
@@ -117,6 +119,12 @@ input {
   color: #873b49;
   padding-top: 20px;
 }
+
+label{
+  font-family: Helvetica, arial;
+}
+
+
 
 @media screen and (max-width:630px) {
   section .result {

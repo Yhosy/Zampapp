@@ -8,15 +8,26 @@
     position: absolute;
     top: 200px;
     padding: 20px;
+    text-align: center;
+    z-index: 1;
 }
 
 li {
+    text-align: left;
+    margin: 5px;
     list-style-type: none;
 }
 
-.cesta div {
-    margin: 5px;
-    color: pink;
+li p {
+    font-size: 15px;
+}
+
+#detalles {
+    margin-left: 10px;
+}
+
+#precio {
+    text-align: left;
 }
 
 

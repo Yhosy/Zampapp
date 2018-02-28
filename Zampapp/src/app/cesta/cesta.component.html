@@ -1,20 +1,18 @@
 <section class="cesta">
+    <h2>Cesta</h2>
     <ul>
         <li *ngFor="let plato of listaCesta">
             <h4>{{plato.nombre}}</h4>
-            <div>
+            <div id="detalles">
                 <p>Precio: {{plato.precio}} €</p>
-            </div>
-            <div>
                 <p>Restaurante: {{plato.restaurante}}</p>
             </div>
-            <!-- <div>
-            <<h6>Cantidad:
-                <p>{{}}</p>
-            </h6></div> -->
+
         </li>
     </ul>
-    <!-- <h5>Precio total:
-        <p>{{}}</p>
-    </h5> -->
+    <div id="precio">
+        <h3>Precio total: {{precioTotal}} €</h3>
+    </div>
+    <button>Comprar</button>
+    <button (click)="outCesta()">Cerrar</button>
 </section>

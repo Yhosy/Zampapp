@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Plato } from '../plato';
+import { ListacestaService } from "../listacesta.service";
 
 
 @Component({
@@ -10,19 +11,18 @@ import { Plato } from '../plato';
 export class PlatosComponent implements OnInit {
   @Input() plato: Plato[];
   isMarcked = false;
-  listaCesta = [];
   onClick() {
     this.isMarcked = true;
   }
-  constructor() { }
+  constructor(private listaService: ListacestaService) { }
 
   ngOnInit() {
+
   }
 
   agregar_Cesta(objPlato) {
     console.log(objPlato);
-    this.listaCesta.push(objPlato);
-    console.log(this.listaCesta);
+    this.listaService.agragaPlato(objPlato)   
   }
 
 }

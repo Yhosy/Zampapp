@@ -3,6 +3,7 @@ import { Categorias } from '../Categorias';
 import { BusquedaService } from '../busqueda.service'
 import { QueryList } from '@angular/core';
 import { Busqueda } from '../busqueda';
+import { ListacestaService } from '../listacesta.service';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,8 @@ import { Busqueda } from '../busqueda';
 export class HomeComponent implements OnInit {
   @ViewChildren('input') elements: QueryList<ElementRef>;
   filtrado = [];
-  constructor(private busquedaService: BusquedaService) { }
+  constructor(private busquedaService: BusquedaService,
+    private listaService: ListacestaService) { this.listaService.onEsconderCesta.emit(true); }
 
   ngOnInit() {
 
@@ -21,9 +23,9 @@ export class HomeComponent implements OnInit {
   }
 
   Escribir(texto) {
-     this.filtrado = Categorias.filter((element, i) => {
-       return element.value.indexOf(texto) >= 0 ;
-     })
+    this.filtrado = Categorias.filter((element, i) => {
+      return element.value.indexOf(texto) >= 0;
+    })
   }
 
   Hola(e) {

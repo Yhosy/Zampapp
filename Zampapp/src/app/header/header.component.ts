@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ListacestaService } from '../listacesta.service';
 
 @Component({
   selector: 'app-header',
@@ -6,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
   cestadx;
-  constructor() { }
+  constructor(private listaService: ListacestaService) {
+    this.listaService.onEsconderCesta.subscribe(x => this.cestadx = null);
+  }
 
   ngOnInit() {
   }
@@ -16,5 +18,7 @@ export class HeaderComponent implements OnInit {
   estadoCesta(event) {
     this.cestadx = event;
   }
+
+
 
 }

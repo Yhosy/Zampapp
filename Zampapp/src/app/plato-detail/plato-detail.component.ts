@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { ResultadosComponent } from '../resultados/resultados.component';
 import { Router } from '@angular/router';
+import { ListacestaService } from '../listacesta.service';
 
 @Component({
 	selector: 'app-plato-detail',
@@ -15,8 +16,11 @@ export class PlatoDetailComponent implements OnInit {
 	constructor(
 		private route: ActivatedRoute,
 		private platoService: PlatoService,
-		private location: Location
-	) { }
+		private location: Location,
+		private listaService: ListacestaService
+	) { 
+		this.listaService.onEsconderCesta.emit(true);
+	}
 
 	ngOnInit(): void {
 		this.getPlato();

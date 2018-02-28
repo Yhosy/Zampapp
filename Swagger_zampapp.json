@@ -1,0 +1,160 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Uber API",
+        "description": "Move your app forward with the Uber API",
+        "version": "1.0.0"
+    },
+    "host": "api.uber.com",
+    "schemes": [
+        "https"
+    ],
+    "basePath": "/v1",
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/platos": {
+            "get": {
+                "summary": "Recoge Categorias de la base de datos",
+                "description": "The Products endpoint returns information about the *Uber* products\noffered at a given location. The response includes the display name\nand other details about each product, and lists the products in the\nproper display order.\n",
+                "parameters": [
+                    {
+                        "name": "categoria;",
+                        "in": "query",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "cantidad;",
+                        "in": "query",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "preferencia;",
+                        "in": "query",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "temperatura;",
+                        "in": "query",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "picante;",
+                        "in": "query",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "precio;",
+                        "in": "query",
+                        "required": false,
+                        "type": "number",
+                        "format": "double"
+                    },
+                    {
+                        "name": "proximidad;",
+                        "in": "query",
+                        "required": false,
+                        "type": "number",
+                        "format": "double"
+                    }
+                ],
+                "tags": [
+                    "platos"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of products",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Plato"
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Plato": {
+            "type": "object",
+            "properties": {
+                "product_id": {
+                    "type": "string",
+                    "description": "Unique identifier representing a specific product for a given latitude & longitude. For example, uberX in San Francisco will have a different product_id than uberX in Los Angeles."
+                },
+                "nombre": {
+                    "type": "string",
+                    "description": "Display name of product."
+                },
+                "precio": {
+                    "type": "number",
+                    "description": "precio del producto."
+                },
+                "restaurante": {
+                    "type": "string",
+                    "description": "a que restaurante pertenece el plato."
+                },
+                "ingrediente": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "Description of product."
+                },
+                "descripcion": {
+                    "type": "string",
+                    "description": "descripcion del plato."
+                },
+                "cantidad": {
+                    "type": "string",
+                    "description": "cantidad del plato."
+                },
+                "pic": {
+                    "type": "string",
+                    "description": "pic del plato."
+                },
+                "temp": {
+                    "type": "string",
+                    "description": "temperatura del plato."
+                },
+                "preferencia": {
+                    "type": "string",
+                    "description": "preferencias del plato."
+                },
+                "foto": {
+                    "type": "string",
+                    "description": "foto del plato."
+                },
+                "valoracion": {
+                    "type": "string",
+                    "description": "valoracion del plato."
+                }
+            }
+        }
+    }
+}

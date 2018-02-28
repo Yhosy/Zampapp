@@ -3,10 +3,28 @@ const mongoose = require('mongoose'),
   Platos = mongoose.model('Platos');
 
 exports.list_all_platos = function (req, res) {
-  Platos.find({}, (err, plato) => {
+  var query = {};
+  var searchFields = ["categoria", "cantidad", "preferencia", "pic", "temp"];
+
+  var regexQueryWrapper = {};
+  regexQueryWrapper["$and"] = [];
+  var wrapper = {"$or": []};
+
+  searchFields.forEach(function(field) {
+
+      var query = {};
+      query[field] = req.query[field].split(",");
+      wrapper["$or"].push(query);
+  });
+
+  regexQueryWrapper["$and"].push(wrapper);
+
+  Platos.find(regexQueryWrapper, (err, plato) => {
+
     if (err)
-      res.send(err);
+    res.send(err);
     res.json(plato);
+    console.log(plato);
   });
 };
 

@@ -18,11 +18,12 @@ export class ResultadosComponent implements OnInit {
 	platos: any;
 	abierto = false;
 	listaFiltrada = [];
+	avisodx = false;
 
 	categorias = ['pizzas', 'hamburguesas', 'bocadillos', 'arroces', 'ensaladas', 'pastas', 'carnes', 'pescados', 'sopas', 'sushi']
 	cantidad = ['para una persona', 'para compartir']
 	preferencias = ['sin gluten', 'sin frutos secos', 'sin lactosa', 'vegetariano', 'vegano', 'sin fructosa', 'sin azucar', 'sin huevo']
-	estaEscondido = false;
+	// estaEscondido = false;
 
 	abrircerrar() {
 		this.abierto = this.abierto ? false : true;
@@ -44,7 +45,7 @@ export class ResultadosComponent implements OnInit {
 	constructor(private platoService: PlatoService,
 		private busquedaService: BusquedaService,
 		private listaService: ListacestaService) {
-			this.listaService.onEsconderCesta.emit(true);
+		this.listaService.onEsconderCesta.emit(true);
 	}
 
 
@@ -98,9 +99,11 @@ export class ResultadosComponent implements OnInit {
 			}
 		}
 		if (this.listaFiltrada.length == 0) {
-			this.estaEscondido = !this.estaEscondido;
+			this.avisodx = true;
+		} else {
+			this.avisodx = false;
 		}
 		this.listaFiltrada;
-
+		console.log("filtro", this.listaFiltrada);
 	}
 }

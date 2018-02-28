@@ -38,7 +38,7 @@
   <div class="resultados">
     <div class="divTable">
       <div class="divTableBody">
-        <app-platos *ngFor="let plato of listaFiltrada" [plato]="plato"></app-platos>
+        <app-platos *ngFor="let plato of platos" [plato]="plato"></app-platos>
         <div id="escondido" *ngIf="avisodx">Lo sentimos, pero no tenemos platos de esta categoría</div>
 <!-- [ngClass]="{'escondido': estaEscondido}" -->
       </div>

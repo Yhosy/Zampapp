@@ -8,13 +8,13 @@ exports.list_all_platos = function (req, res) {
 
   var regexQueryWrapper = {};
   regexQueryWrapper["$and"] = [];
-  var wrapper = {"$or": []};
+  var wrapper = { "$or": [] };
 
-  searchFields.forEach(function(field) {
+  searchFields.forEach(function (field) {
 
-      var query = {};
-      query[field] = req.query[field].split(",");
-      wrapper["$or"].push(query);
+    var query = {};
+    query[field] = req.query[field];
+    wrapper["$or"].push(query);
   });
 
   regexQueryWrapper["$and"].push(wrapper);
@@ -22,7 +22,7 @@ exports.list_all_platos = function (req, res) {
   Platos.find(regexQueryWrapper, (err, plato) => {
 
     if (err)
-    res.send(err);
+      res.send(err);
     res.json(plato);
     console.log(plato);
   });

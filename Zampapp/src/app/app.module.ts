@@ -16,8 +16,6 @@ import { PreguntasComponent } from './preguntas/preguntas.component';
 import { PlatoDetailComponent } from './plato-detail/plato-detail.component';
 import { HttpModule } from '@angular/http';
 import { HoverDirective } from './hover.directive';
-import { HomeIzquierdaComponent } from './home-izquierda/home-izquierda.component';
-import { HomeDerechaComponent } from './home-derecha/home-derecha.component';
 import { CestaComponent } from './cesta/cesta.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PopupComponent } from './popup/popup.component';
@@ -33,8 +31,6 @@ import { PopupComponent } from './popup/popup.component';
     PreguntasComponent,
     PlatoDetailComponent,
     HoverDirective,
-    HomeIzquierdaComponent,
-    HomeDerechaComponent,
     CestaComponent,
     PopupComponent
   ],

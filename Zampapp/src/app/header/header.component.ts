@@ -15,10 +15,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  // Mostrar cesta
   estadoCesta(event) {
     this.cestadx = event;
   }
-
-
-
 }

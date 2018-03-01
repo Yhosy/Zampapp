@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Plato } from '../plato';
-import { ListacestaService } from "../listacesta.service";
+import { Plato }                    from '../plato';
+import { ListacestaService }        from "../listacesta.service";
 
 
 @Component({
@@ -17,9 +17,9 @@ export class PlatosComponent implements OnInit {
   constructor(private listaService: ListacestaService) { }
 
   ngOnInit() {
-
   }
 
+  // Agregar plato a cesta
   agregar_Cesta(objPlato, cantidad) {
     this.listaService.agragaPlato(objPlato, cantidad.value.num);  
   }

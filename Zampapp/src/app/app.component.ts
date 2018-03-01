@@ -10,18 +10,8 @@ import { PlatoService } from './plato.service';
 })
 export class AppComponent implements OnInit {
 
-  homedx;
-
   ngOnInit() {
-    this.homedx = false;
-  }
 
-  hola() {
-    this.homedx = true;
-  }
-
-  adios(event) {
-    this.homedx = event;
   }
 
 }

@@ -1,7 +1,6 @@
 <div class="result">
   <div class="filtro">
     <button (click)="abrircerrar()" id="responsiveBusqueda">Búsqueda avanzada</button>
-
     <div id="divfantasma" *ngIf="abierto" ng-app="myApp" ng-controller="controllerName">
       <form action="#">
         <h3>Categorías</h3>
@@ -33,13 +32,11 @@
       </button>
     </div>
   </div>
-
   <div class="resultados">
     <div class="divTable">
       <div class="divTableBody">
         <app-platos *ngFor="let plato of platos" [plato]="plato"></app-platos>
         <div id="escondido" *ngIf="avisodx">Lo sentimos, pero no tenemos platos de esta categoría</div>
-<!-- [ngClass]="{'escondido': estaEscondido}" -->
       </div>
     </div>
   </div>

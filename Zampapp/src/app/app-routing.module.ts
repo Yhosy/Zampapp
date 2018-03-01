@@ -1,17 +1,11 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
- 
+import {AppComponent}           from './app.component';
+import {HomeComponent}          from './home/home.component';
+import {ResultadosComponent}    from './resultados/resultados.component';
+import {PreguntasComponent}     from './preguntas/preguntas.component';
+import {PlatoDetailComponent}   from './plato-detail/plato-detail.component';
 
-import {AppComponent} from './app.component'
-import {HomeComponent} from './home/home.component'
-import {ResultadosComponent} from './resultados/resultados.component'
-import {PreguntasComponent} from './preguntas/preguntas.component'
-import {PlatoDetailComponent} from './plato-detail/plato-detail.component';
-// import {PreguntasComponent} from './preguntas/preguntas.component'
-
-
-
- 
 const routes: Routes = [
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
   { path: 'Home', component: HomeComponent },

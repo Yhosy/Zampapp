@@ -124,8 +124,6 @@ label{
   font-family: Helvetica, arial;
 }
 
-
-
 @media screen and (max-width:630px) {
   section .result {
     display: block;
@@ -136,9 +134,7 @@ label{
   .slider-horizontal {
     width: 95% !important;
   }
-  /*#divEscondido{
-    display: none;
-  }*/
+
   #responsiveBusqueda {
     border: #C0CA33 3px solid;
     display: block;
@@ -163,8 +159,4 @@ label{
     height: 870px;
     width: 250px;
   }
-  /*#responsiveBusqueda{
-    display: none;
-    box-shadow: none;
-  }*/
 }

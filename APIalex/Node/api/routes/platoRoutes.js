@@ -1,5 +1,5 @@
 'use strict';
-module.exports = function(app) {
+module.exports = function (app) {
   const platosController = require('../controllers/platoController');
 
   // todoList Routes

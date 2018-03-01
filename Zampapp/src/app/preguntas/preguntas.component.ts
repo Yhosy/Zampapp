@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { BusquedaService } from '../busqueda.service';
-import { Busqueda } from '../busqueda';
-import { Router } from '@angular/router';
-import { ListacestaService } from '../listacesta.service';
-
-import { NodeService } from '../node.service';
-import { timeout } from 'q';
-import { $ } from 'protractor';
+import { Component, OnInit }  from '@angular/core';
+import { BusquedaService }    from '../busqueda.service';
+import { Busqueda }           from '../busqueda';
+import { Router }             from '@angular/router';
+import { ListacestaService }  from '../listacesta.service';
+import { NodeService }        from '../node.service';
+import { timeout }            from 'q';
+import { $ }                  from 'protractor';
 
 @Component({
   selector: 'app-preguntas',
@@ -27,11 +26,9 @@ export class PreguntasComponent implements OnInit {
   ) {this.listaService.onEsconderCesta.emit(true); }
 
   ngOnInit() {
-    // this._node.getPlatos().subscribe(data => {
-    //   this._platos = data;
-    // });
   }
 
+  // Pop-up si los inputs no estan llenos
   estadoPopup(e) {
     this.popupdx = e;
     window.setTimeout(() => {
@@ -40,6 +37,7 @@ export class PreguntasComponent implements OnInit {
     }, 6000);
   }
 
+  // comprueba que los inputs estén correctos
   validaForm(arrInputs) {
     var contador = 0;
     for (let i = 0; i < arrInputs.length; i++) {
@@ -53,25 +51,21 @@ export class PreguntasComponent implements OnInit {
     };
     if (contador == 0) {
       this.estadoPopup(event);
-      // alert("Algo te falta por rellenar, aunque sea rellena algo please, ¡¡¡X tus ZampApp's!!!");
       return false;
     } else {
       return true;
     }
   };
+
+  // Crea el objeto busqueda y lo rellena 
   onSelect(cant, temp, pic, pref) {
     this.busquedaService.Busqueda = new Busqueda;
     this.inputs = [];
     this.inputs.push(cant.value, temp.value, pic.value, pref.value);
     if (!this.validaForm(this.inputs)) {
       this.busquedaService.Busqueda = new Busqueda;
-      // break;
     } else {
       this.router.navigate(['Resultados']);
     }
-    console.log("fin select");
-    console.log(this.busquedaService.Busqueda);
   }
 };
-
-// this.busquedaService.Busqueda

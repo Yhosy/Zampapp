@@ -1,5 +1,3 @@
-/*Empieza Diseño general*/
-
 * {
     font-family: Helvetica, arial;
     color: #D35400;
@@ -17,12 +15,6 @@ h5 {
     font-size: 26px;
     font-weight: 700;
 }
-
-
-/*Fin Diseño general*/
-
-
-/*Empieza RANDOM*/
 
 #asks {
     width: 100%;
@@ -108,6 +100,3 @@ h5 {
         margin-bottom: 5px;
     }
 }
-
-
-/*Fin RANDOM*/

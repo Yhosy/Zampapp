@@ -1,11 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { PlatoService } from '../plato.service';
-import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
-import { ResultadosComponent } from '../resultados/resultados.component';
-import { Router } from '@angular/router';
-import { ListacestaService } from '../listacesta.service';
-import { Plato } from '../plato';
+import { Component, OnInit, Input } 	from '@angular/core';
+import { PlatoService } 				from '../plato.service';
+import { ActivatedRoute }				from '@angular/router';
+import { Location } 					from '@angular/common';
+import { ResultadosComponent }			from '../resultados/resultados.component';
+import { Router }						from '@angular/router';
+import { ListacestaService } 			from '../listacesta.service';
+import { Plato } 						from '../plato';
 
 @Component({
 	selector: 'app-plato-detail',
@@ -27,6 +27,7 @@ export class PlatoDetailComponent implements OnInit {
 		this.getPlato();
 	}
 
+	// Cargar plato
 	getPlato(): void {
 		const id = this.route.snapshot.params.id;
 		this.platoService.getPlato(id)
@@ -35,6 +36,7 @@ export class PlatoDetailComponent implements OnInit {
 			});
 	}
 
+	// Agregar plato a la cesta
 	agregar_Cesta(objPlato, cantidad) {
 		this.listaService.agragaPlato(objPlato, cantidad.value.num)   
 	  }

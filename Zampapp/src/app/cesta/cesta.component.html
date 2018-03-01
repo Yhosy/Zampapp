@@ -11,7 +11,7 @@
         </li>
     </ul>
     <div id="precio">
-        <h3>Precio total: {{precioTotal.val}} €</h3>
+        <h3>Precio total: {{precioTotal.val | number: '1.2'}} €</h3>
     </div>
     <button class="btnCesta">Comprar</button>
     <button class="btnCesta" (click)="outCesta()">Cerrar</button>

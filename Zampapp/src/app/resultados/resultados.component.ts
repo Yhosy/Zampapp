@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 import { BusquedaService } from '../busqueda.service'
 import { Busqueda } from '../busqueda';
 import { ListacestaService } from '../listacesta.service';
-import {URLSearchParams} from '@angular/http'
+import { URLSearchParams } from '@angular/http'
 
 
 @Component({
@@ -24,7 +24,7 @@ export class ResultadosComponent implements OnInit {
 	categorias = ['pizzas', 'hamburguesas', 'bocadillos', 'arroces', 'ensaladas', 'pastas', 'carnes', 'pescados', 'sopas', 'sushi']
 	cantidad = ['para una persona', 'para compartir']
 	preferencias = ['sin gluten', 'sin frutos secos', 'sin lactosa', 'vegetariano', 'vegano', 'sin fructosa', 'sin azucar', 'sin huevo']
-	// estaEscondido = false;
+
 
 	abrircerrar() {
 		this.abierto = this.abierto ? false : true;
@@ -42,8 +42,8 @@ export class ResultadosComponent implements OnInit {
 		}
 		console.log(this.busquedaService.Busqueda);
 		let params = new URLSearchParams();
-		for(let key in this.busquedaService.Busqueda){
-		    params.set(key, this.busquedaService.Busqueda[key])
+		for (let key in this.busquedaService.Busqueda) {
+			params.set(key, this.busquedaService.Busqueda[key])
 
 		}
 		console.log("http://resultados?" + params.toString());
@@ -59,22 +59,36 @@ export class ResultadosComponent implements OnInit {
 	ngOnInit() {
 
 		if (window.innerWidth >= 480) {
-			this.abierto = false;
+			this.abierto = true;
 		}
 		if (window.innerWidth <= 480) {
-			this.abierto = true;
+			this.abierto = false;
 		}
 		this.buscar();
 
+		// if (this.platos.length == 0) {
+		// 	this.avisodx = true;
+		// } else {
+		// 	this.avisodx = false;
+		// }
+		// this.listaFiltrada;
 	}
 
-	buscar(){
+	buscar() {
 		this.platoService.getPlatos(this.busquedaService.Busqueda).subscribe(platos => {
 			this.platos = platos;
 			console.log("platos", this.platos)
 			this.busquedaService.Busqueda = new Busqueda;
+			console.log("platos leng", this.platos.length);
+			if (this.platos.length == 0) {
+				this.avisodx = true;
+			} else {
+				this.avisodx = false;
+			}
 		});
-		
+
+
+
 		return this.platos;
 	}
 }

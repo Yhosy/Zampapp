@@ -16,7 +16,7 @@ export class PreguntasComponent implements OnInit {
   _platos: any;
   url: string;
   inputs = [];
-  names = ["cantidad", "temperatura", "picante", "preferencia"];
+  names = ["cantidad", "temp", "pic", "preferencia"];
   name: string;
   popupdx;
   constructor(

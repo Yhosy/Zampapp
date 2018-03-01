@@ -2,37 +2,40 @@
     <section>
 
         <div class="izquierda tit">
-           <div class="resultadoshome">
+            <div class="resultadoshome">
                 <h1>
                     Recomendación del Chef
                 </h1>
             </div>
-             
-             <div class="random" >
+
+            <div class="random">
                 <a routerLink="/Preguntas">
-                    <img src="../../assets/img/icono/olla.png" alt="" class="busqueda">
+                    <img src="../../assets/img/icono/olla.png" alt="" class="busqueda botbonito">
                 </a>
             </div>
-      
+
         </div>
 
         <div class="derecha tit">
-                <h1>
-                    ¡Sé lo que quiero!
-                </h1>
-                <div class="subderecha">
-                    <div class="pretable" *ngFor="let categoria of filtrado">
+            <h1>
+                ¡Sé lo que quiero!
+            </h1>
+            <div class="subderecha">
+                <div class="pretable botbonito2" *ngFor="let categoria of filtrado">
+                    <label [for]=categoria.id>
                         <div>
                             <input #input name='categoria' [value]=categoria.value type="checkbox" class="transparent" [id]=categoria.id>
                             <p>{{categoria.value.charAt(0).toUpperCase() + categoria.value.slice(1)}}</p>
                         </div>
-                    </div>
-                    <div class="busqueda">
-                        <a (click)="Hola()" routerLink="/Resultados">
-                            <img src="../../assets/img/icono/buscar.png" alt="" class="imgBusqueda" id="btnBusqueda">
-                        </a>
-                    </div>
+                    </label>
+
                 </div>
+                <div class="busqueda">
+                    <a (click)="Hola()" routerLink="/Resultados">
+                        <img src="../../assets/img/icono/buscar.png" alt="" class="imgBusqueda botbonito" id="btnBusqueda">
+                    </a>
+                </div>
+            </div>
         </div>
 
     </section>

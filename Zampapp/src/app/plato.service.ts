@@ -1,8 +1,8 @@
-import { Http } from '@angular/http';
-import { Injectable } from '@angular/core';
+import { Http } 								from '@angular/http';
+import { Injectable } 							from '@angular/core';
+import { HttpClient, HttpHeaders, HttpParams } 	from '@angular/common/http';
+import { Plato } 								from './plato';
 import 'rxjs/add/operator/map';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Plato } from './plato';
 const urlApi = 'http://localhost:8080/';
 
 

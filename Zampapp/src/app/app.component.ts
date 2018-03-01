@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { PlatoService } from './plato.service';
+import { Component, OnInit }   from '@angular/core';
+import { PlatoService }        from './plato.service';
 
 
 @Component({

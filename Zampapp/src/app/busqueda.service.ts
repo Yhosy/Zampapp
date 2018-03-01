@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Busqueda} from './busqueda'
+import {Busqueda}     from './busqueda'
 
 @Injectable()
 export class BusquedaService {

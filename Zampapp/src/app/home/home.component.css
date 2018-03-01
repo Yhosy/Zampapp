@@ -342,7 +342,7 @@ input:focus{
     .home .pretable div {
         width: 125px;
         height: 170px;
-        margin-bottom: 20px;
+        padding-bottom: 20px;
     }
     .home .pretable div p {
         margin-top: 5px;

@@ -16,11 +16,11 @@ export class PlatoService {
 	getPlatos(x) {
 		let params = new HttpParams();
 
-       params = params.append('categoria', x.categoria);
-       params = params.append('cantidad', x.cantidad);
-       params = params.append('preferencia', x.preferencia);
-       params = params.append('pic', x.pic);
-       params = params.append('temp', x.temp);
+       params = params.set('categoria', x.categoria);
+       params = params.set('cantidad', x.cantidad);
+       params = params.set('preferencia', x.preferencia);
+       params = params.set('pic', x.pic);
+       params = params.set('temp', x.temp);
 
        return this.httpClient.get(urlApi  + 'platos/', { params });
 	}

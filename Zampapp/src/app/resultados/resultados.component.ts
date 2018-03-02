@@ -64,8 +64,6 @@ export class ResultadosComponent implements OnInit {
 
 	// pinta los platos
 	buscar() {
-		// console.log(this.elements)
-		
 		this.platoService.getPlatos(this.busquedaService.Busqueda).subscribe(platos => {
 			this.platos = platos;
 			this.busquedaService.Busqueda = new Busqueda;

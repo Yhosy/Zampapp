@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChildren, QueryList,ElementRef } 		from '@angular/core';
+import { Component, OnInit } 		from '@angular/core';
 import { PlatoService } 			from '../plato.service';
 import { ActivatedRoute } 			from '@angular/router';
 import { FormControl, FormGroup } 	from '@angular/forms';
@@ -16,7 +16,6 @@ import 'rxjs/add/operator/map';
 	styleUrls: ['./resultados.component.css']
 })
 export class ResultadosComponent implements OnInit {
-	@ViewChildren('input') elements: QueryList<ElementRef>;
 	platos: any;
 	abierto = false;
 	listaFiltrada = [];
